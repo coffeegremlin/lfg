@@ -1,5 +1,5 @@
-.container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+body {
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  color: white;
 }

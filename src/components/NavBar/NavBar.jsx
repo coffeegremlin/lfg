@@ -1,15 +1,26 @@
 import { Link } from 'react-router-dom'
+import './Nav.css'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
       {user ?
-        <nav>
+      <nav class="navbar">
           <ul>
             <li>Welcome, {user.name}</li>
+            <li><Link to="/landing">Home</Link></li>
             <li><Link to="/profiles">Profiles</Link></li>
-            <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
+            <li><Link to="" onClick={handleLogout}>Log Out</Link></li>
           </ul>
+           <div class="dropdown">
+          <button class="dropbtn">Dropdown 
+         </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div> 
         </nav>
       :
         <nav>
