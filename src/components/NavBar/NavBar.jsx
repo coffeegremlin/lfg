@@ -8,12 +8,12 @@ const NavBar = ({ user, handleLogout }) => {
       <nav class="navbar">
           <ul>
             <li>Welcome, {user.name}</li>
-            <li><Link to="/landing">Home</Link></li>
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/profiles">Profiles</Link></li>
             <li><Link to="" onClick={handleLogout}>Log Out</Link></li>
           </ul>
            <div class="dropdown">
-          <button class="dropbtn">Dropdown 
+          <button class="dropbtn">Topics of Interest
          </button>
         <div class="dropdown-content">
           <a href="#">Link 1</a>
