@@ -4,7 +4,6 @@ ul {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   background-image: url('https://i.ibb.co/PhHY1Q1/image.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,15 +13,20 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(20, 18, 67);
+  border-bottom: dotted rgb(125, 122, 142);
+  opacity: 75%;
 }
 
 .navbar a {
+  font-family: monospace;
+  font-weight: bold;
   float: left;
-  font-size: 16px;
+  border-radius: 30px;
+  font-size: 26px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 2px 16px;
   text-decoration: none;
 }
 
@@ -43,7 +47,7 @@ body {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: rgb(26, 78, 142);
+  background-color: rgb(245, 182, 22);
 }
 
 .dropdown-content {
