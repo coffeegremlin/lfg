@@ -7,6 +7,7 @@ function searchStores(req, res) {
   // have to figure out how to set location to start search
   // can have users set location from landing and then use search terms to find bars, restaurants, shops, and event spaces
   // or can have set functions for each search (with terms hard-coded) and users search by location
+  // hard-code specific terms for specific places (tabletop/videogame/sport?)
   // either way should we limit results to like top 10?
 
   
