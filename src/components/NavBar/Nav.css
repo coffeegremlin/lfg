@@ -4,17 +4,16 @@ ul {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url('https://i.ibb.co/PhHY1Q1/image.png');
+  font-family: monospace;
+  background-image: url('https://i.ibb.co/fp9fhBX/785507.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
-
 .navbar {
   overflow: hidden;
   background-color: #333;
+  opacity: 75%;
 }
 
 .navbar a {
@@ -22,7 +21,7 @@ body {
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 16px;
   text-decoration: none;
 }
 
@@ -36,14 +35,16 @@ body {
   border: none;
   outline: none;
   color: white;
-  padding: 12px 16px;
+  padding: 5px 18px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: rgb(26, 78, 142);
+  background-color: rgb(216, 186, 12);
+  color: black;
+  border-radius: 20px;
 }
 
 .dropdown-content {
@@ -58,7 +59,7 @@ body {
 .dropdown-content a {
   float: none;
   color: rgb(85, 0, 255);
-  padding: 12px 16px;
+  padding: 15px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
