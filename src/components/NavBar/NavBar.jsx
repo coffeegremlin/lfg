@@ -10,15 +10,17 @@ const NavBar = ({ user, handleLogout }) => {
             <li>Welcome, {user.name}</li>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/profiles">Profiles</Link></li>
+            <li><Link to="/">Community Chat</Link></li>
             <li><Link to="" onClick={handleLogout}>Log Out</Link></li>
           </ul>
            <div class="dropdown">
           <button class="dropbtn">Topics of Interest
          </button>
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <a href="#">Bars</a>
+          <a href="#">Restaurants</a>
+          <a href="#">Retail Spaces</a>
+          <a href="#">Events</a>
         </div>
       </div> 
         </nav>
