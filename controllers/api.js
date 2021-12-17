@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 // just stubbing up functions atm
-function searchPlace(req, res) {
+function search(req, res) {
   console.log(req.params.query)
   axios.get(`https://api.yelp.com/v3/businesses/search?term=${req.params.query}&location=baltimore&limit=10`, {
     headers: {
@@ -25,7 +25,7 @@ function searchBars(req, res) {
 
 
 export {
-  searchPlace,
+  search,
   searchStores,
   searchBars,
 }
