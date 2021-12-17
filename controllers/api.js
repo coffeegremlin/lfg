@@ -2,21 +2,14 @@ import axios from "axios";
 
 
 // just stubbing up functions atm
-function searchRestaurants(req, res) {
+function searchPlace(req, res) {
   console.log(req.params.query)
-  axios.get(`https://api.yelp.com/v3/businesses/search?term=nandos&location=baltimore`, {
+  axios.get(`https://api.yelp.com/v3/businesses/search?term=${req.params.query}&location=baltimore&limit=10`, {
     headers: {
       'Authorization': `Bearer ${process.env.REACT_APP_API_KEY}`
     }
   })
-  .then(apiResponse => res.json(apiResponse.data))
-  // have to figure out how to set location to start search
-  // can have users set location from landing and then use search terms to find bars, restaurants, shops, and event spaces
-  // or can have set functions for each search (with terms hard-coded) and users search by location
-  // hard-code specific terms for specific places (tabletop/videogame/sport?)
-  // either way should we limit results to like top 10?
-
-  
+  .then(response => res.json(response.data))
 }
 
 function searchStores(req, res) {
@@ -32,7 +25,7 @@ function searchBars(req, res) {
 
 
 export {
-  searchRestaurants,
+  searchPlace,
   searchStores,
   searchBars,
 }
