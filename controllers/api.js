@@ -2,8 +2,14 @@ import axios from "axios";
 
 
 // just stubbing up functions atm
-function searchStores(req, res) {
-  console.log("haahaahaa")
+function searchRestaurants(req, res) {
+  console.log(req.params.query)
+  axios.get(`https://api.yelp.com/v3/businesses/search?term=nandos&location=baltimore`, {
+    headers: {
+      'Authorization': `Bearer ${process.env.REACT_APP_API_KEY}`
+    }
+  })
+  .then(apiResponse => res.json(apiResponse.data))
   // have to figure out how to set location to start search
   // can have users set location from landing and then use search terms to find bars, restaurants, shops, and event spaces
   // or can have set functions for each search (with terms hard-coded) and users search by location
@@ -13,7 +19,7 @@ function searchStores(req, res) {
   
 }
 
-function searchRestaurants(req, res) {
+function searchStores(req, res) {
   console.log("heeheehee")
 
   
@@ -26,7 +32,7 @@ function searchBars(req, res) {
 
 
 export {
-  searchStores,
   searchRestaurants,
+  searchStores,
   searchBars,
 }
