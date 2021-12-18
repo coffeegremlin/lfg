@@ -1,6 +1,6 @@
-async function search() {
+async function searchRetail(query) {
   try {
-    const res = await fetch(`api/api/`)
+    const res = await fetch(`api/retail/${query}`)
     const data = await res.json()
     console.log("search function result", data)
     return data
@@ -10,5 +10,5 @@ async function search() {
 }
 
 export {
-  search,
+  searchRetail,
 }
