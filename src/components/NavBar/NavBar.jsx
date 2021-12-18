@@ -19,7 +19,7 @@ const NavBar = ({ user, handleLogout }) => {
         <div class="dropdown-content">
           <a href="#">Bars</a>
           <a href="#">Restaurants</a>
-          <a href="#">Retail Spaces</a>
+          <Link to="/retail">Retail Spaces</Link>
           <a href="#">Events</a>
         </div>
       </div> 
