@@ -13,9 +13,9 @@ const NavBar = ({ user, handleLogout }) => {
             <li><Link to="/chat">Community Chat</Link></li>
             <li><Link to="" onClick={handleLogout}>Log Out</Link></li>
           </ul>
-           <div class="dropdown">
+            <div class="dropdown">
           <button class="dropbtn">Topics of Interest
-         </button>
+          </button>
         <div class="dropdown-content">
           <a href="#">Bars</a>
           <a href="#">Restaurants</a>
