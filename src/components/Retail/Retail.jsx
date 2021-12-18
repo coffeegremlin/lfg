@@ -11,7 +11,7 @@ const Retail = () => {
     try {
       searchRetail(formData.query)
       .then(results => {
-        setResults(results.businesses) //is this the field we're using?
+        setResults(results.limit) //is this the field we're using?
       })
       .catch(() => {
         console.log("uh oh")
