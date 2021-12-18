@@ -10,7 +10,7 @@ const NavBar = ({ user, handleLogout }) => {
             <li>Welcome, {user.name}</li>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/profiles">Profiles</Link></li>
-            <li><Link to="/">Community Chat</Link></li>
+            <li><Link to="/chat">Community Chat</Link></li>
             <li><Link to="" onClick={handleLogout}>Log Out</Link></li>
           </ul>
            <div class="dropdown">
