@@ -6,6 +6,12 @@
     letter-spacing: 0.5px;
   }
   
+  .chat-page {
+    position: absolute;
+    width: 100%;
+   
+  }
+
   .ce-chat-list {
     background-color: rgb(240, 240, 240) !important;
   }
@@ -61,6 +67,7 @@
   }
   
   .ce-chat-settings-container {
+
     padding-top: 12px !important;
   }
   
