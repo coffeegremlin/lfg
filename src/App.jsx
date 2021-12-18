@@ -7,7 +7,8 @@ import Chat from './pages/Chat/Chat'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
-import RetailSpaces from './pages/Retail/Retail'
+import Retail from './components/Retail/Retail'
+import Bar from './components/Bar/Bar'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -41,7 +42,8 @@ const App = () => {
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
         />
-        <Route path="/retail" element={<RetailSpaces />} />
+        <Route path="/retail" element={<Retail />} />
+        <Route path="/bar" element={<Bar/>} />
       </Routes>
     </>
   )
