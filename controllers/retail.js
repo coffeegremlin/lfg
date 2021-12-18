@@ -6,7 +6,7 @@ function index(req, res) {
 
 function search(req, res) {
   console.log(req.params.query)
-  axios.get(`https://api.yelp.com/v3/businesses/search?term=game shop&location=${req.params.query}&limit=10`, {
+  axios.get(`https://api.yelp.com/v3/businesses/search?term=game_shop&location=${req.params.query}&limit=10`, {
     headers: {
       'Authorization': `Bearer ${process.env.REACT_APP_API_KEY}`
     }
