@@ -6,7 +6,6 @@ const Landing = ({ user }) => {
     <main className={styles.container}>
 
 
-
     </main>
    
   )

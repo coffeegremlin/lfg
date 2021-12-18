@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Nav.css'
+import '../../pages/Landing/Landing.module.css'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
@@ -26,7 +27,7 @@ const NavBar = ({ user, handleLogout }) => {
         </nav>
       :
         <nav>
-          <ul>
+          <ul className='login-box'>
             <li><Link to="/login">Log In</Link></li>
             <li><Link to="/signup">Sign Up</Link></li>
           </ul>
