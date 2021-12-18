@@ -82,6 +82,26 @@ const Retail = () => {
             width: '400'
           }}
         />
+        <Timeline
+          dataSource={{
+            sourceType: 'https://twitter.com/Polygon?s=20',
+            screenName: 'Polygon'
+          }}
+          options={{
+            height: '400',
+            width: '400'
+          }}
+        />
+        <Timeline
+          dataSource={{
+            sourceType: 'https://twitter.com/HardDriveMag?s=20',
+            screenName: 'HardDriveMag'
+          }}
+          options={{
+            height: '400',
+            width: '400'
+          }}
+        />
       </div>
       </>
     )
