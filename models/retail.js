@@ -24,7 +24,7 @@ const retailSchema = new Schema(
       type: String,
       required: true
     },
-    address:{
+    address1:{ //do we need all this listed here or can we pull this from yelp? as "location"?
       type: String,
       required: true
     },
