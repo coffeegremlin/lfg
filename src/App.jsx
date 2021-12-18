@@ -9,6 +9,7 @@ import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
 import Retail from './components/Retail/Retail'
 import Bar from './components/Bar/Bar'
+import Restaurant from './components/Restaurant/Restaurant'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -43,7 +44,8 @@ const App = () => {
           element={user ? <Profiles /> : <Navigate to="/login" />}
         />
         <Route path="/retail" element={<Retail />} />
-        <Route path="/bar" element={<Bar/>} />
+        <Route path="/bar" element={<Bar />} />
+        <Route path="/restaurant" element={<Restaurant />} />
       </Routes>
     </>
   )

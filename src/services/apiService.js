@@ -20,7 +20,19 @@ async function searchBar(query) {
   }
 }
 
+async function searchRestaurant(query) {
+  try {
+    const res = await fetch(`api/restaurant/${query}`)
+    const data = await res.json()
+    console.log("search function result", data)
+    return data
+  } catch (err) {
+    return console.log(err, "AHHHHHH")
+  }
+}
+
 export {
   searchRetail,
   searchBar,
+  searchRestaurant,
 }
