@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { search } from "../../services/apiService"
+import { Timeline } from "react-twitter-widgets";
+import { searchRetail } from "../../services/apiService"
 
 const Retail = () => {
-  const [ formData, setFormData ] = useState({
-    query: ""
-  })
+  const [ formData, setFormData ] = useState({query: ""})
   const [ results, setResults ] = useState([])
 
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      search(formData.query)
+      searchRetail(formData.query)
       .then(results => {
         setResults(results.businesses) //is this the field we're using?
       })
@@ -27,6 +26,7 @@ const Retail = () => {
     })
   }
 
+  const { queryRetail } = formData
 
   if (results === null) {
     return <div>Uh oh, we didn't find anything. Maybe try changing up the search terms a little?</div>
@@ -42,7 +42,7 @@ const Retail = () => {
           <input 
           placeholder="City, State"
           type="text" 
-          value="query" 
+          value={queryRetail}
           name="query"
           onChange={handleChange}
           />
@@ -71,6 +71,17 @@ const Retail = () => {
             <h3>A little stringilymingiler here idk what yet</h3>
           }
         </div>
+        {/* Add in twitter timelines for retail places on righthand side. like gamestop, newegg, polygon, warhammer, etc. */}
+        <Timeline
+          dataSource={{
+            sourceType: 'https://twitter.com/IGN?s=20',
+            screenName: 'IGN'
+          }}
+          options={{
+            height: '400',
+            width: '400'
+          }}
+        />
       </div>
       </>
     )

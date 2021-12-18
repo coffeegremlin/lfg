@@ -1,3 +1,7 @@
+* {
+ 
+}
+
 ul {
   font-family: monospace;
   text-decoration: none;
@@ -33,7 +37,6 @@ ul {
   margin-top: 10px;
   display: inline-block;
   float: right;
-  overflow: hidden;
 }
 
 .dropdown .dropbtn {
@@ -73,6 +76,7 @@ ul {
 }
 
 .dropdown-content a:hover {
+  z-index: auto;
   background-color: rgb(242, 208, 98);
 }
 

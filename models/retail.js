@@ -47,8 +47,8 @@ const retailSchema = new Schema(
   }
 )
 
-const Retail = mongoose.model('Retail', retailSchema)
+const RetailModel = mongoose.model('RetailModel', retailSchema)
 
 export {
-  Retail
+  RetailModel
 }
