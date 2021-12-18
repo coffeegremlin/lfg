@@ -1,3 +1,7 @@
+* {
+ 
+}
+
 ul {
   text-decoration: none;
   list-style: none;
@@ -10,7 +14,6 @@ ul {
 }
 
 .navbar a {
-
   float: left;
   font-size: 16px;
   color: white;
@@ -21,7 +24,6 @@ ul {
 
 .dropdown {
   float: right;
-  overflow: hidden;
 }
 
 .dropdown .dropbtn {
@@ -47,11 +49,10 @@ ul {
   background-color: #96748a;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgb(242, 208, 98);
-  z-index: 1;
+ 
 }
 
 .dropdown-content a {
-  
   float: none;
   color: rgb(8, 2, 21);
   padding: 12px 16px;
@@ -61,6 +62,7 @@ ul {
 }
 
 .dropdown-content a:hover {
+  z-index: auto;
   background-color: rgb(242, 208, 98);
 }
 
