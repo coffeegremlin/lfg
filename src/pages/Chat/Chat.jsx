@@ -6,7 +6,7 @@ import './Chat.css';
 const projectID='2b543fe2-2a38-4552-8b53-6ae71ea17344'
 
 const Chat = () => {
-	// want to show log in form if user is not logged into chat
+// want to show log in form if user is not logged into chat
 if (!localStorage.getItem('username')) return <LoginForm />;
 
   return (
