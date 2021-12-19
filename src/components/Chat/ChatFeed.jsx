@@ -18,6 +18,12 @@ const ChatFeed = (props) => {
     />
   ));
 
+  const chatLogout = () => {
+  localStorage.removeItem('username');
+  localStorage.removeItem('password');
+  window.location.reload();
+}
+
   const renderMessages = () => {
     const keys = Object.keys(messages);
 
@@ -58,6 +64,7 @@ const ChatFeed = (props) => {
       </div>
     </div>
   );
+
 };
 
 export default ChatFeed;

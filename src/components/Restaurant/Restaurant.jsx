@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Timeline } from 'react-twitter-widgets';
 import { searchRestaurant } from '../../services/apiService';
+import './Restaurant.css'
 
 const Restaurant = () => {
   const [ formData, setFormData] = useState({query: ""})
@@ -27,6 +28,7 @@ const Restaurant = () => {
     })
   }
 
+
   if (results === null) {
     return(
       <div>Sorry, we couldn't find a good place to eat. Maybe change your search up a tad?</div>
@@ -35,26 +37,36 @@ const Restaurant = () => {
     return (
       <>
         <div>
-        <h2>What kind of food are we in the mood for?</h2>
-        <form 
+        <h2 className='res-header'>What kind of food are we in the mood for?</h2>
+        <form className='search-form'
           autoComplete="off"
           onSubmit={handleSubmit}
         >
-          <input 
+          <div class="tb">
+          <div class="td">
+          <input className='city-input'
           placeholder="City, State"
           type="text" 
           value={queryRestaurant}
           name="query"
           onChange={handleChange}
-          />
-          <button>Let's go get some grub!</button>
-        </form>
+          /></div>
+          <div class="td" id="s-cover">
+          <button className='restaurant-search'><div id="s-circle"></div>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
         <div>
           {results.length ? 
             <>
-            <div className="restaurant-cards daddy">
+
+
+            <div className="res-cards daddy">
               {results.map((restaurant, idx) =>
-              <div className="card child" key={restaurant._id}>
+              <div className="card-child" key={restaurant._id}>
                 <div className="card-header">
                   <img id="restaurant-img" src={restaurant.image_url} alt="restaurant"/>
                 </div>
@@ -103,7 +115,6 @@ const Restaurant = () => {
             width: '400'
           }}
         />
-      </div>
       </>
     )
   }

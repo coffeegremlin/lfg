@@ -15,7 +15,7 @@ main {
     
 }
 
-.city-input, .bar-search
+.city-input, .restaurant-search
 {
     color: #fff;
     font-family: Nunito;
@@ -48,7 +48,7 @@ main {
     padding-left: 35px;
 }
 
-.bar-search
+.restaurant-search
 {
     position: relative;
     display: block;
@@ -72,7 +72,7 @@ main {
     transition: 0.5s ease all;
 }
 
-.bar-search span
+.restaurant-search span
 {
     position: absolute;
     top: 68px;
@@ -86,7 +86,7 @@ main {
     transition: 0.5s ease all;
 }
 
-.bar-search span:before, .bar-search span:after
+.restaurant-search span:before, .restaurant-search span:after
 {
     content: '';
     position: absolute;
@@ -119,26 +119,26 @@ main {
     transform: rotateZ(0);
 }
 
-#s-cover:hover .bar-search span:before
+#s-cover:hover .res-search span:before
 {
     bottom: 11px;
     transform: rotateZ(52deg);
 }
 
-#s-cover:hover .bar-search span:after
+#s-cover:hover .restaurant-search span:after
 {
     bottom: -11px;
     transform: rotateZ(-52deg);
 }
 
-#s-cover:hover .bar-search span:before, #s-cover:hover .bar-search span:after
+#s-cover:hover .restaurant-search span:before, #s-cover:hover .restaurant-search span:after
 {
     right: -6px;
     width: 40px;
     background-color: #fff;
 }
 
-.bar-header {
+.res-header {
   color: white;
   font-family: monospace;
   font-size: 50px;
@@ -146,7 +146,7 @@ main {
   padding: 20px;
 }
 
-.bar-cards {
+.res-cards {
   margin: 25px;
   display: flex;
   justify-content: center;
@@ -167,7 +167,7 @@ main {
   padding: 10px;
 }
 
-#bar-img {
+#restaurant-img {
     margin-right: 18px;
     object-fit: cover;
     border-radius: 6px;
