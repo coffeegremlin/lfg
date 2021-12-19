@@ -11,7 +11,7 @@ const Bar = () => {
     try {
       searchBar(formData.query)
       .then(results => {
-        setResults(results.limit)
+        setResults(results.businesses)
       })
       .catch(() => {
         console.log("go home you are drunk")
