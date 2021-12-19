@@ -28,7 +28,11 @@ async function searchBar(query) {
 
 async function searchRestaurant(query) {
   try {
-    const res = await fetch(`api/restaurant/${query}`)
+    const res = await fetch(`api/restaurant/${query}`, {
+      headers: {
+        "Authorization": `Bearer ${tokenService.getToken()}`
+      }
+    })
     const data = await res.json()
     console.log("search function result", data)
     return data
