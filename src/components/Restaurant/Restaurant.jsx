@@ -6,12 +6,14 @@ const Restaurant = () => {
   const [ formData, setFormData] = useState({query: ""})
   const [ results, setResults] = useState([])
 
+  const { queryRestaurant } = formData
+
   const handleSubmit = async e => {
     e.preventDefault()
     try {
       searchRestaurant(formData.query)
       .then(results => {
-        setResults(results.limit)
+        setResults(results.businesses)
       })
       .catch(() => {
         console.log("no food for you")
@@ -25,11 +27,9 @@ const Restaurant = () => {
     })
   }
 
-  const { queryRestaurant } = formData
-
   if (results === null) {
     return(
-      <div>Sorry, we couldn't find a good palce to eat. Maybe change your search up a tad?</div>
+      <div>Sorry, we couldn't find a good place to eat. Maybe change your search up a tad?</div>
     )
   } else {
     return (
