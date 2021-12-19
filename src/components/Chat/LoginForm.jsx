@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
- 
+
+const projectID='2b543fe2-2a38-4552-8b53-6ae71ea17344'
+
 const LoginForm = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -8,6 +10,20 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+  const authObject = { 'Project-ID': projectID, 'User-Name': username, 'User-Secret': password };
+
+      try {
+        // username / password goes to chatEngine and gives a message
+      await axios.get('https://api.chatengine.io/chats', { headers: authObject });
+
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', password);
+
+      window.location.reload();
+    } catch (error) {
+      
+    }
+  };
 
   return (
     <div className="wrapper">
@@ -28,3 +44,5 @@ const LoginForm = () => {
 
   );
 };
+
+export default LoginForm;
