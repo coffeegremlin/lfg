@@ -46,7 +46,8 @@ const EventForm = (props) => {
       value={props.event}
       onChange={(e) => props.setEvent(e.target.value)}
       />
-      {/* date */}<input
+      {/* date */}
+      <input
       type="text"
       required
       name="eventDate"
@@ -65,6 +66,7 @@ const EventForm = (props) => {
       value={props.event}
       onChange={(e) => props.setEvent(e.target.value)}
       />
+      <button type="submit">Submit</button>
     </form>
   )
 }
