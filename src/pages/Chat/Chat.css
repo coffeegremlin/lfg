@@ -36,7 +36,7 @@
   }
   
   .ce-text-input {
-    border-radius: 6px !important;
+    border-radius: 12px !important;
     border: 1px solid #1e5667 !important;
   }
   
@@ -82,7 +82,7 @@
     height: 100%;
     width: 100%;
     overflow: scroll;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(242, 242, 242);
   }
   
   .chat-title-container {
@@ -130,7 +130,7 @@
   .message {
     padding: 12px;
     font-size: 16px;
-    border-radius: 6px;
+    border-radius: 16px;
     max-width: 60%;
   }
   
