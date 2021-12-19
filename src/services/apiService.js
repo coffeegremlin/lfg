@@ -17,7 +17,11 @@ async function searchRetail(query) {
 
 async function searchBar(query) {
   try {
-    const res = await fetch(`api/bar/${query}`)
+    const res = await fetch(`api/bar/${query}`, {
+      headers: {
+        "Authorization": `Bearer ${tokenService.getToken()}`
+      }
+    })
     const data = await res.json()
     console.log("search function result", data)
     return data

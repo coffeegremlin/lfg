@@ -7,9 +7,9 @@ import cors from 'cors'
 
 import { router as profilesRouter } from './routes/profiles.js'
 import { router as authRouter } from './routes/auth.js'
-import { router as searchRouter } from './routes/search.js'
 import { router as retailRouter } from './routes/retail.js'
 import { router as restaurantRouter } from './routes/restaurant.js'
+import { router as barRouter } from './routes/bar.js'
 
 import('./config/database.js')
 
@@ -26,9 +26,9 @@ app.use(express.json())
 
 app.use('/api/profiles', profilesRouter)
 app.use('/api/auth', authRouter)
-app.use('/api/search', searchRouter)
 app.use('/api/retail', retailRouter)
 app.use('/api/restaurant', restaurantRouter)
+app.use('/api/bar', barRouter)
 
 app.get('/*', function (req, res) {
   res.sendFile(

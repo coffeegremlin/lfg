@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import * as retailCtrl from "../controllers/retail.js"
+import * as barCtrl from "../controllers/bar.js"
 import { decodeUserFromToken, checkAuth } from '../middleware/auth.js'
 
 const router = Router()
@@ -7,9 +7,10 @@ const router = Router()
 // ========= Public Routes ========= 
 
 
+
 // ========= Protected Routes ========= 
 router.use(decodeUserFromToken)
-router.get('/:query',  checkAuth, retailCtrl.search )
+router.get('/:query',  checkAuth, barCtrl.search )
 
 
 

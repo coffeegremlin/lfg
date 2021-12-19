@@ -1,9 +1,5 @@
 import axios from "axios";
 
-function index(req, res) {
-  console.log("we gotta get a landing page for routes, right?")
-}
-
 function search(req, res) {
   console.log(req.params.query)
   console.log(process.env.API_KEY)
@@ -18,6 +14,5 @@ function search(req, res) {
 
 
 export {
-  index,
   search,
 }
