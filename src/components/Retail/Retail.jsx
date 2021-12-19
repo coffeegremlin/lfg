@@ -6,12 +6,14 @@ const Retail = () => {
   const [ formData, setFormData ] = useState({query: ""})
   const [ results, setResults ] = useState([])
 
+  const { queryRetail } = formData
+
   const handleSubmit = async e => {
     e.preventDefault()
     try {
       searchRetail(formData.query)
       .then(results => {
-        setResults(results.limit) //is this the field we're using?
+        setResults(results.businesses) //is this the field we're using?
       })
       .catch(() => {
         console.log("uh oh")
@@ -25,8 +27,6 @@ const Retail = () => {
     setFormData({...formData, [e.target.name]: e.target.value
     })
   }
-
-  const { queryRetail } = formData
 
   if (results === null) {
     return <div>Uh oh, we didn't find anything. Maybe try changing up the search terms a little?</div>
@@ -68,7 +68,7 @@ const Retail = () => {
             </div>
             </>
             :
-            <h3>A little stringilymingiler here idk what yet</h3>
+            <h3>Gotta be something good</h3>
           }
         </div>
         {/* Add in twitter timelines for retail places on righthand side. like gamestop, newegg, polygon, warhammer, etc. */}

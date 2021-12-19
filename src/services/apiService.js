@@ -1,6 +1,12 @@
+import * as tokenService from "../services/tokenService"
+
 async function searchRetail(query) {
   try {
-    const res = await fetch(`api/retail/${query}`)
+    const res = await fetch(`api/retail/${query}`, {
+      headers: {
+        "Authorization": `Bearer ${tokenService.getToken()}`
+      }
+    })
     const data = await res.json()
     console.log("search function result", data)
     return data
