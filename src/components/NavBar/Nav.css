@@ -4,6 +4,11 @@ ul {
   list-style: none;
 }
 
+li {
+  font-size: 20px;
+  color: white;
+}
+
 .navbar {
     background-color: indigo;
     -webkit-padding-start: 0px;
