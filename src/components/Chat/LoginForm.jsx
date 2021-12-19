@@ -24,6 +24,12 @@ const LoginForm = () => {
       
     }
   };
+  
+
+  const LogoutForm = () => {
+    
+  }
+
 
   return (
     <div className="wrapper">
