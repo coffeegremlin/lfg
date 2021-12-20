@@ -149,7 +149,7 @@ main {
 .res-cards {
   margin: 25px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   padding: 10px;
@@ -177,4 +177,9 @@ main {
     max-width: 200px;
     min-height: 100px;
     min-width: 100px;
+}
+
+.twitter-feed {
+  display: flex;
+  justify-content: space-evenly;
 }

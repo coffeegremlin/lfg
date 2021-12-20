@@ -83,16 +83,18 @@ const Bar = () => {
           }
         </div>
         {/* Add in twitter timelines for bar places on righthand side. */}
+        <div className='twitter-feed'>
         <Timeline
           dataSource={{
             sourceType: 'https://twitter.com/DrunkenMoogle?s=20',
             screenName: 'DrunkenMoogle'
           }}
           options={{
-            height: '400',
-            width: '400'
+            height: '900',
+            width: '900'
           }}
         />
+        </div>
       </>
     )
   }

@@ -85,14 +85,15 @@ const Restaurant = () => {
           }
         </div>
         {/* Add in twitter timelines for restaurant places on righthand side. */}
+        <div className='twitter-feed'>
         <Timeline
           dataSource={{
             sourceType: 'https://twitter.com/Grubhub?s=20',
             screenName: 'Grubhub'
           }}
           options={{
-            height: '400',
-            width: '400'
+            height: '700',
+            width: '700'
           }}
         />
         <Timeline
@@ -101,8 +102,8 @@ const Restaurant = () => {
             screenName: 'Eater'
           }}
           options={{
-            height: '400',
-            width: '400'
+            height: '700',
+            width: '700'
           }}
         />
         <Timeline
@@ -111,10 +112,11 @@ const Restaurant = () => {
             screenName: 'BingingWBabish'
           }}
           options={{
-            height: '400',
-            width: '400'
-          }}
+            height: '700',
+            width: '700'
+          }} 
         />
+        </div>
       </>
     )
   }
