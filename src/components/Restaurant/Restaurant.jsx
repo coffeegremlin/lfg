@@ -6,32 +6,58 @@ import './Restaurant.css'
 const Restaurant = () => {
   const [ formData, setFormData] = useState({query: ""})
   const [ results, setResults] = useState([])
+  const [ status, setStatus ] = useState(false)
 
   const { queryRestaurant } = formData
 
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      searchRestaurant(formData.query)
-      .then(results => {
-        setResults(results.businesses)
-      })
-      .catch(() => {
-        console.log("no food for you")
-      })
+      setStatus(false)
+      const results = await searchRestaurant(formData.query)
+      console.log(results)
+      results.businesses 
+        ? setResults(results.businesses) 
+        : setStatus(true)
     } catch (err) {
       console.log(err)
+      setStatus(true)
     }
   }
+
   const handleChange = e => {
     setFormData({...formData, [e.target.name]: e.target.value
     })
   }
 
 
-  if (results === null) {
+  if (status) {
     return(
-      <div>Sorry, we couldn't find a good place to eat. Maybe change your search up a tad?</div>
+      <div>
+        <p>Sorry, we couldn't find a good place to eat. Maybe change your search up a tad?</p>
+          <form className='search-form'
+            autoComplete="off"
+            onSubmit={handleSubmit}
+          >
+            <div class="tb">
+              <div class="td">
+                <input className='city-input'
+                placeholder="City, State"
+                type="text" 
+                value={queryRestaurant}
+                name="query"
+                onChange={handleChange}
+              />
+              </div>
+                <div class="td" id="s-cover">
+                  <button className='bar-search'>
+                    <div id="s-circle"></div>
+                    <span></span>
+                  </button>
+                </div>
+            </div>
+          </form>
+      </div>
     )
   } else {
     return (
