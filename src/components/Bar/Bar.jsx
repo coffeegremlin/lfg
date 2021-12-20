@@ -109,7 +109,7 @@ const Bar = () => {
             :
             <h3></h3>
           }
-        </div>
+        
         {/* Add in twitter timelines for bar places on righthand side. */}
         <div className='twitter-feed'>
         <Timeline
