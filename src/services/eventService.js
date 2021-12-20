@@ -64,3 +64,4 @@ export const getEventById = async (EventId) => {
     throw error
   }
 }
+
