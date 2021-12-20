@@ -10,6 +10,7 @@ import { router as authRouter } from './routes/auth.js'
 import { router as retailRouter } from './routes/retail.js'
 import { router as restaurantRouter } from './routes/restaurant.js'
 import { router as barRouter } from './routes/bar.js'
+import {router as eventRouter } from './routes/event.js'
 
 import('./config/database.js')
 
@@ -29,6 +30,7 @@ app.use('/api/auth', authRouter)
 app.use('/api/retail', retailRouter)
 app.use('/api/restaurant', restaurantRouter)
 app.use('/api/bar', barRouter)
+app.use('/event', eventRouter)
 
 app.get('/*', function (req, res) {
   res.sendFile(
