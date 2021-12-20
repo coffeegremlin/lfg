@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { getAllEvents } from "../services/eventService"
-import EventForm from '../Event/EventForm'
+import EventForm from '../../pages/CreateEvent/EventForm'
 
-const Event = () => {
+const EventCard = () => {
   const [eventData, SetEventData] = useState([])
   return (
     <>
@@ -38,10 +38,10 @@ const Event = () => {
 //       {!props.event.is_attending && <button onClick={() => props.markEventAttended(props.event._id)}>Attending</button>
 //       }
 
-//       <button onClick={() => props.handleDeletePost(props.post._id)}>Delete</button>
+//       <button onClick={() => props.handleDeleteEvent(props.event._id)}>Delete</button>
 //     </div >
 //   )
 // }
 
 
-export default Event
+export default EventCard

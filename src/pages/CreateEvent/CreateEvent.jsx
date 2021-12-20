@@ -4,7 +4,6 @@ import EventForm from './EventForm'
 import { createEvent } from '../../services/eventService'
 
 const CreateEvent = (props) => {
-  const navigate = useNavigate()
   const [eventName, setEventName] = useState('')
   const [tournament, setTournament] = useState('')
   const [activity, setActivity] = useState('')
@@ -24,7 +23,6 @@ const CreateEvent = (props) => {
     try {
       const newEvent = await createEvent(eventData)
       console.log('New Event Data: ', newEvent)
-      navigate('/event')
     } catch (error) {
       throw error
     }
@@ -32,7 +30,6 @@ const CreateEvent = (props) => {
 
   return (
     <div className="layout">
-      <Header title='Create Event' />
       <EventForm
         name={eventName}
         setEventName={setEventName}
@@ -50,10 +47,7 @@ const CreateEvent = (props) => {
       />
     </div>
   )
-
-
 }
 
 
-
-export default createEvent
+export default CreateEvent
