@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import './Nav.css'
 import '../../pages/Landing/Landing.module.css'
 
-const NavBar = ({ user, handleLogout }) => {
+const NavBar = ({ user, handleLogout, userProfile }) => {
   return (
     <>
       {user ?
@@ -14,7 +14,7 @@ const NavBar = ({ user, handleLogout }) => {
             <div className='nav-route'>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/profiles">Profiles</Link></li>
-            <li><Link to="/myprofile">My Profile</Link></li>
+            <li><Link to="/profile" state={userProfile}>My Profile</Link></li>
             <li><Link to="/chat">Community Chat</Link></li>
             <li><Link to="" onClick={handleLogout}>Log Out</Link></li></div>
           </ul>
