@@ -59,11 +59,9 @@ const Restaurant = () => {
     </div>
   </form>
 </div>
-        <div>
+        <div className='top-half'>
           {results.length ? 
             <>
-
-
             <div className="res-cards daddy">
               {results.map((restaurant, idx) =>
               <div className="card-child" key={restaurant._id}>
@@ -81,9 +79,9 @@ const Restaurant = () => {
             </div>
             </>
             :
-            <h3>To be filled in later?</h3>
+            <h3></h3>
           }
-        </div>
+        
         {/* Add in twitter timelines for restaurant places on righthand side. */}
         <div className='twitter-feed'>
         <Timeline
@@ -92,8 +90,8 @@ const Restaurant = () => {
             screenName: 'Grubhub'
           }}
           options={{
-            height: '700',
-            width: '700'
+            height: '500',
+            width: '500'
           }}
         />
         <Timeline
@@ -102,8 +100,8 @@ const Restaurant = () => {
             screenName: 'Eater'
           }}
           options={{
-            height: '700',
-            width: '700'
+            height: '500',
+            width: '500'
           }}
         />
         <Timeline
@@ -112,11 +110,11 @@ const Restaurant = () => {
             screenName: 'BingingWBabish'
           }}
           options={{
-            height: '700',
-            width: '700'
+            height: '500',
+            width: '500'
           }} 
         />
-        </div>
+        </div></div>
       </>
     )
   }
