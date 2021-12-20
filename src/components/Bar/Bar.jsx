@@ -57,11 +57,9 @@ const Bar = () => {
       </div>
     </div>
   </form>
-</div>
         <div className='top-half'>
           {results.length ? 
             <>
-            
             <div className="bar-cards daddy">
               {results.map((bar, idx) =>
               <div className="card-child" key={bar._id}>
@@ -81,7 +79,7 @@ const Bar = () => {
             :
             <h3></h3>
           }
-        
+        </div>
         {/* Add in twitter timelines for bar places on righthand side. */}
         <div className='twitter-feed'>
         <Timeline
