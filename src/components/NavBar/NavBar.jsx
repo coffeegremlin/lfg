@@ -8,12 +8,16 @@ const NavBar = ({ user, handleLogout }) => {
       {user ?
       <nav className="navbar">
           <ul>
+            <div className='welcome-message'>
             <li>Welcome, {user.name}</li>
+            </div>
+            <div className='nav-route'>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/profiles">Profiles</Link></li>
             <li><Link to="/chat">Community Chat</Link></li>
-            <li><Link to="" onClick={handleLogout}>Log Out</Link></li>
+            <li><Link to="" onClick={handleLogout}>Log Out</Link></li></div>
           </ul>
+          
             <div class="dropdown">
           <button class="dropbtn">Topics of Interest
           </button>
@@ -38,3 +42,4 @@ const NavBar = ({ user, handleLogout }) => {
 }
 
 export default NavBar
+
