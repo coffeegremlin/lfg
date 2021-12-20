@@ -6,19 +6,20 @@ import './Bar.css'
 const Bar = () => {
   const [ formData, setFormData] = useState({query: ""})
   const [ results, setResults] = useState([])
+  const [ status, setStatus ] = useState(false)
 
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      searchBar(formData.query)
-      .then(results => {
-        setResults(results.businesses)
-      })
-      .catch(() => {
-        console.log("go home you are drunk")
-      })
+      setStatus(false)
+      const results = await searchBar(formData.query)
+      console.log(results)
+      results.businesses 
+        ? setResults(results.businesses) 
+        : setStatus(true)
     } catch (err) {
       console.log(err)
+      setStatus(true)
     }
   }
   const handleChange = e => {
@@ -28,35 +29,64 @@ const Bar = () => {
 
   const { queryBar } = formData
 
-  if (results === null) {
+  if (status) {
     return(
-      <div>Well, looks you're staying in. We couldn't find any bars for you. Maybe try changing your search a bit?</div>
+      <div>
+        <p>Well, looks you're staying in. We couldn't find any bars for you. Maybe try changing your search a bit?</p>
+          <form className='search-form'
+            autoComplete="off"
+            onSubmit={handleSubmit}
+          >
+            <div class="tb">
+              <div class="td">
+                <input className='city-input'
+                placeholder="City, State"
+                type="text" 
+                value={queryBar}
+                name="query"
+                onChange={handleChange}
+              />
+              </div>
+                <div class="td" id="s-cover">
+                  <button className='bar-search'>
+                    <div id="s-circle"></div>
+                    <span></span>
+                  </button>
+                </div>
+            </div>
+          </form>
+      </div>
     )
   } else {
     return (
       <>
         <div>
         <h2 className='bar-header'>Where are we thinking of having a drink?</h2>
-        <form className='search-form'
-          autoComplete="off"
-          onSubmit={handleSubmit}
-        >
-          <div class="tb">
-          <div class="td">
-            <input className='city-input'
-          placeholder="City, State"
-          type="text" 
-          value={queryBar}
-          name="query"
-          onChange={handleChange}
-          /></div>
-          <div class="td" id="s-cover">
-          <button className='bar-search'><div id="s-circle"></div>
-         <span></span>
-        </button>
-      </div>
-    </div>
-  </form>
+
+          <form className='search-form'
+            autoComplete="off"
+            onSubmit={handleSubmit}
+          >
+            <div class="tb">
+              <div class="td">
+                <input className='city-input'
+                  placeholder="City, State"
+                  type="text" 
+                  value={queryBar}
+                  name="query"
+                  onChange={handleChange}
+                  />
+              </div>
+            <div class="td" id="s-cover">
+              <button className='bar-search'>
+                <div id="s-circle"></div>
+                  <span></span>
+              </button>
+            </div>
+            </div>
+          </form>
+        </div>
+
         <div className='top-half'>
           {results.length ? 
             <>

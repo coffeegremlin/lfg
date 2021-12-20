@@ -10,6 +10,9 @@ function search(req, res) {
     }
   })
   .then(response => res.json(response.data))
+  .catch(err => {
+    res.status(500).json(err)
+  })
 }
 
 
