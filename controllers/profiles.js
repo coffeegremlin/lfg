@@ -9,4 +9,16 @@ function index(req, res) {
   })
 }
 
-export { index }
+function showLoggedInUserProfile(req, res) {
+  Profile.findById(req.user.profile)
+  .then(profile => res.json(profile))
+  .catch(err => {
+    console.log(err)
+    res.status(500).json(err)
+  })
+}
+
+export { 
+  index,
+  showLoggedInUserProfile,
+}

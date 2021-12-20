@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
@@ -7,16 +7,28 @@ import Chat from './pages/Chat/Chat'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
+import * as profileService from './services/profileService'
 import Retail from './components/Retail/Retail'
 import Bar from './components/Bar/Bar'
 import Restaurant from './components/Restaurant/Restaurant'
-import Profile from './pages/Profiles/MyProfile'
+import Profile from './pages/Profiles/Profile'
 // import Event from './components/EventCard/EventCard'
 
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
+
+  const [userProfile, setUserProfile] = useState({})
+
+  useEffect(() => {
+    if (user) {
+      profileService.getUserProfile()
+      .then(profile => setUserProfile(profile))
+    } else {
+      setUserProfile(null)
+    }
+  }, [user])
 
   const handleLogout = () => {
     authService.logout()
@@ -30,7 +42,7 @@ const App = () => {
 
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout} />
+      <NavBar user={user} userProfile={userProfile} handleLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
         <Route path="/chat" element={<Chat user={user} />} />
@@ -46,7 +58,7 @@ const App = () => {
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
         />
-        <Route path="/myprofile" element={<Profile />} />
+        <Route path="/profile" element={user ? <Profile /> : <Navigate to="/login" />} />
         <Route path="/retail" element={<Retail />} />
         <Route path="/bar" element={<Bar />} />
         <Route path="/restaurant" element={<Restaurant />} />

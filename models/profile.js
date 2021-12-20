@@ -7,6 +7,8 @@ const profileSchema = new mongoose.Schema({
     timestamps: true,
 })
 
+// add more attributes to the model later
+
 const Profile = mongoose.model('Profile', profileSchema)
 
 export {Profile}
