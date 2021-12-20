@@ -20,7 +20,7 @@ const Profiles = () => {
           {profiles.map(profile=>
             <p class="user-name" key={profile._id}>{profile.name}</p>
           )}
-         
+        
         </>
       :
         <p>No profiles yet</p>
@@ -29,5 +29,5 @@ const Profiles = () => {
     </>
   )
 }
- 
+
 export default Profiles

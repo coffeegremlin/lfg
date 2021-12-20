@@ -14,6 +14,7 @@ const NavBar = ({ user, handleLogout }) => {
             <div className='nav-route'>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/profiles">Profiles</Link></li>
+            <li><Link to="/myprofile">My Profile</Link></li>
             <li><Link to="/chat">Community Chat</Link></li>
             <li><Link to="" onClick={handleLogout}>Log Out</Link></li></div>
           </ul>

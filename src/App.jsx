@@ -10,6 +10,7 @@ import * as authService from './services/authService'
 import Retail from './components/Retail/Retail'
 import Bar from './components/Bar/Bar'
 import Restaurant from './components/Restaurant/Restaurant'
+import Profile from './pages/Profiles/MyProfile'
 // import Event from './components/EventCard/EventCard'
 
 
@@ -45,6 +46,7 @@ const App = () => {
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
         />
+        <Route path="/myprofile" element={<Profile />} />
         <Route path="/retail" element={<Retail />} />
         <Route path="/bar" element={<Bar />} />
         <Route path="/restaurant" element={<Restaurant />} />
