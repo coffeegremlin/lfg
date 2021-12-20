@@ -58,7 +58,7 @@ const Bar = () => {
     </div>
   </form>
 </div>
-        <div>
+        <div className='top-half'>
           {results.length ? 
             <>
             
@@ -79,9 +79,9 @@ const Bar = () => {
             </div>
             </>
             :
-            <h3>Twitter Feeds</h3>
+            <h3></h3>
           }
-        </div>
+        
         {/* Add in twitter timelines for bar places on righthand side. */}
         <div className='twitter-feed'>
         <Timeline
@@ -94,7 +94,7 @@ const Bar = () => {
             width: '900'
           }}
         />
-        </div>
+        </div></div>
       </>
     )
   }

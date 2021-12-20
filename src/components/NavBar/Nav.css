@@ -1,4 +1,5 @@
 ul {
+  font-size: 30px;
   font-family: monospace;
   text-decoration: none;
   list-style: none;
@@ -6,11 +7,13 @@ ul {
 
 li {
   color: white;
-  font-size: 20px;
+
 }
 
+
 .navbar {
-    background-color: indigo;
+    background: rgb(37,155,191);
+    background: radial-gradient(circle, rgba(37,155,191,1) 5%, rgba(182,42,136,1) 82%, rgba(86,68,110,1) 100%);
     -webkit-padding-start: 0px;
     -webkit-margin-before: 0px;
     -webkit-margin-after: 0px;
@@ -22,22 +25,23 @@ li {
     width:100%;
     position: relative; /* <-- Added */
     z-index: 1; /* <-- Added */
+    opacity: 65%;
+    
 }
 
 .navbar a {
   font-family: monospace;
   float: left;
-  font-size: 16px;
+  font-size: 30x;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 16px 10px 14px;
   text-decoration: none;
 }
 
 .dropdown {
   position: relative;
   margin-top: 10px;
-
   float: right;
 }
 
@@ -56,6 +60,7 @@ li {
   color: black;
   background-color: rgb(242, 208, 98);
   border-radius: 20px;
+  
 }
 
 .dropdown-content {

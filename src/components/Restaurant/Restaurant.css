@@ -1,5 +1,6 @@
-main {
+ {
   color: white;
+  border: solid;
 }
 
 .tb
@@ -147,24 +148,24 @@ main {
 }
 
 .res-cards {
-  margin: 25px;
+  margin: 50px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-direction: ;
   align-items: center;
   flex-wrap: wrap;
-  padding: 10px;
 }
 
 .card-child {
-  background-color: rgb(113, 77, 66);
+  background: rgba(57, 23, 15, 0.5);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
   border: double rgb(97, 134, 157);
   border-radius: 20px;
-  padding: 10px;
+
 }
 
 #restaurant-img {
@@ -172,14 +173,23 @@ main {
     object-fit: cover;
     border-radius: 6px;
     height: 30vw;
-    /* width: 30vw; */
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 250px;
+    max-width: 250px;
     min-height: 100px;
     min-width: 100px;
 }
 
+.top-half {
+ margin-top: 20px;
+ display: flex;
+ justify-content: center;
+ padding-right: 25px;
+
+}
+
 .twitter-feed {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  flex-direction: column;
+  
 }
