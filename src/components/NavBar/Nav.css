@@ -29,6 +29,7 @@
     width:100%;
     position: relative; /* <-- Added */
     z-index: 1; /* <-- Added */
+    opacity: 65%;
     padding-bottom: 10px;
     
 }
@@ -100,6 +101,7 @@ ul.login-box {
     padding: 0;
     margin: 0;
     font-weight: bold;
+    opacity: 85%;
     background-color: gray;
     left: 40%;
     line-height: 100px;
