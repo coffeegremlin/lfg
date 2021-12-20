@@ -26,7 +26,7 @@ async function searchBar(query) {
     console.log("search function result", data)
     return data
   } catch (err) {
-    return console.log(err, "AHHHHHH")
+    throw err
   }
 }
 
