@@ -11,7 +11,7 @@ async function searchRetail(query) {
     console.log("search function result", data)
     return data
   } catch (err) {
-    return console.log(err, "AHHHHHH")
+    throw err
   }
 }
 
@@ -41,7 +41,7 @@ async function searchRestaurant(query) {
     console.log("search function result", data)
     return data
   } catch (err) {
-    return console.log(err, "AHHHHHH")
+    throw err
   }
 }
 

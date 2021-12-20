@@ -6,31 +6,59 @@ import "./Retail.css"
 const Retail = () => {
   const [ formData, setFormData ] = useState({query: ""})
   const [ results, setResults ] = useState([])
+  const [ status, setStatus ] = useState(false)
 
-  const { queryRetail } = formData
-
+  
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      searchRetail(formData.query)
-      .then(results => {
-        setResults(results.businesses) //is this the field we're using?
-      })
-      .catch(() => {
-        console.log("uh oh")
-      })
+      setStatus(false)
+      const results = await searchRetail(formData.query)
+      console.log(results)
+      results.businesses 
+        ? setResults(results.businesses) 
+        : setStatus(true)
     } catch (err) {
       console.log(err)
+      setStatus(true)
     }
   }
-
+  
   const handleChange = e => {
     setFormData({...formData, [e.target.name]: e.target.value
     })
   }
 
-  if (results === null) {
-    return <div>Uh oh, we didn't find anything. Maybe try changing up the search terms a little?</div>
+  const { queryRetail } = formData
+  
+  if (status) {
+    return(
+      <div>
+        <p>Uh oh, we didn't find anything. Maybe try changing up the search terms a little?</p>
+          <form className='search-form'
+            autoComplete="off"
+            onSubmit={handleSubmit}
+          >
+            <div class="tb">
+              <div class="td">
+                <input className='city-input'
+                placeholder="City, State"
+                type="text" 
+                value={queryRetail}
+                name="query"
+                onChange={handleChange}
+              />
+              </div>
+                <div class="td" id="s-cover">
+                  <button className='bar-search'>
+                    <div id="s-circle"></div>
+                    <span></span>
+                  </button>
+                </div>
+            </div>
+          </form>
+      </div>
+    )
   } else {
     return (
       <>
@@ -41,21 +69,22 @@ const Retail = () => {
           onSubmit={handleSubmit}
         >
           <div class="tb">
-          <div class="td">
-          <input className='city-input'
-          placeholder="City, State"
-          type="text" 
-          value={queryRetail}
-          name="query"
-          onChange={handleChange}
-          /></div>
-          <div class="td" id="s-cover">
-          <button className='retail-search'><div id="s-circle"></div>
-           <span></span>
-        </button>
-      </div>
-    </div>
-  </form>
+            <div class="td">
+              <input className='city-input'
+                placeholder="City, State"
+                type="text" 
+                value={queryRetail}
+                name="query"
+                onChange={handleChange}
+              />
+            </div>
+              <div class="td" id="s-cover">
+                <button className='retail-search'><div id="s-circle"></div>
+                  <span></span>
+                </button>
+              </div>
+          </div>
+        </form>
         <div className='top-half'>
           {results.length ? 
             <>
@@ -111,7 +140,7 @@ const Retail = () => {
             width: '400'
           }}
         />
-         </div></div>
+        </div></div>
       </>
       )
     }
