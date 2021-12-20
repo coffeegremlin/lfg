@@ -181,3 +181,18 @@ main {
     min-height: 100px;
     min-width: 100px;
 }
+
+.top-half {
+ margin-top: 20px;
+ display: flex;
+ justify-content: center;
+ padding-right: 25px;
+
+}
+
+.twitter-feed {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  
+}
