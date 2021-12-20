@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Timeline } from 'react-twitter-widgets';
 import { searchBar } from '../../services/apiService';
+import './Bar.css'
 
 const Bar = () => {
   const [ formData, setFormData] = useState({query: ""})
@@ -35,26 +36,35 @@ const Bar = () => {
     return (
       <>
         <div>
-        <h2>Where are we thinking of having a drink?</h2>
-        <form 
+        <h2 className='bar-header'>Where are we thinking of having a drink?</h2>
+        <form className='search-form'
           autoComplete="off"
           onSubmit={handleSubmit}
         >
-          <input 
+          <div class="tb">
+          <div class="td">
+            <input className='city-input'
           placeholder="City, State"
           type="text" 
           value={queryBar}
           name="query"
           onChange={handleChange}
-          />
-          <button>Made your choice?</button>
-        </form>
+          /></div>
+          <div class="td" id="s-cover">
+          <button className='bar-search'><div id="s-circle"></div>
+         <span></span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
         <div>
           {results.length ? 
             <>
+            
             <div className="bar-cards daddy">
               {results.map((bar, idx) =>
-              <div className="card child" key={bar._id}>
+              <div className="card-child" key={bar._id}>
                 <div className="card-header">
                   <img id="bar-img" src={bar.image_url} alt="bar"/>
                 </div>
@@ -63,27 +73,28 @@ const Bar = () => {
                 </h3>}
                 <p>{bar.address}</p>
                 <p>{bar.phone}</p>
-                <p>{bar.rating}</p> 
+                <p>Rating: {bar.rating}</p> 
               </div>
               )}
             </div>
             </>
             :
-            <h3>To be filled in later?</h3>
+            <h3>Twitter Feeds</h3>
           }
         </div>
         {/* Add in twitter timelines for bar places on righthand side. */}
+        <div className='twitter-feed'>
         <Timeline
           dataSource={{
             sourceType: 'https://twitter.com/DrunkenMoogle?s=20',
             screenName: 'DrunkenMoogle'
           }}
           options={{
-            height: '400',
-            width: '400'
+            height: '900',
+            width: '900'
           }}
         />
-      </div>
+        </div>
       </>
     )
   }

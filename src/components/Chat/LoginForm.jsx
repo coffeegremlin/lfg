@@ -24,11 +24,6 @@ const LoginForm = () => {
       
     }
   };
-  
-
-  const LogoutForm = () => {
-    
-  }
 
 
   return (
