@@ -10,7 +10,8 @@ import * as authService from './services/authService'
 import Retail from './components/Retail/Retail'
 import Bar from './components/Bar/Bar'
 import Restaurant from './components/Restaurant/Restaurant'
-import Event from './components/Event/Event'
+// import Event from './components/EventCard/EventCard'
+
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -47,7 +48,7 @@ const App = () => {
         <Route path="/retail" element={<Retail />} />
         <Route path="/bar" element={<Bar />} />
         <Route path="/restaurant" element={<Restaurant />} />
-        <Route path="/event" element={<Event />} />
+        {/* <Route path="/event" element={<Event />} /> */}
       </Routes>
     </>
   )
