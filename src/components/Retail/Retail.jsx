@@ -39,8 +39,8 @@ const Retail = () => {
             autoComplete="off"
             onSubmit={handleSubmit}
           >
-            <div class="tb">
-              <div class="td">
+            <div className="tb">
+              <div className="td">
                 <input className='city-input'
                 placeholder="City, State"
                 type="text" 
@@ -49,7 +49,7 @@ const Retail = () => {
                 onChange={handleChange}
               />
               </div>
-                <div class="td" id="s-cover">
+                <div className="td" id="s-cover">
                   <button className='bar-search'>
                     <div id="s-circle"></div>
                     <span></span>
@@ -68,8 +68,8 @@ const Retail = () => {
           autoComplete="off"
           onSubmit={handleSubmit}
         >
-          <div class="tb">
-            <div class="td">
+          <div clasName="tb">
+            <div className="td">
               <input className='city-input'
                 placeholder="City, State"
                 type="text" 
@@ -78,7 +78,7 @@ const Retail = () => {
                 onChange={handleChange}
               />
             </div>
-              <div class="td" id="s-cover">
+              <div className="td" id="s-cover">
                 <button className='retail-search'><div id="s-circle"></div>
                   <span></span>
                 </button>

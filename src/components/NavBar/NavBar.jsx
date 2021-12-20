@@ -19,10 +19,10 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
             <li><Link to="" onClick={handleLogout}>Log Out</Link></li></div>
           </ul>
           
-            <div class="dropdown">
-          <button class="dropbtn">Topics of Interest
+            <div className="dropdown">
+          <button className="dropbtn">Topics of Interest
           </button>
-        <div class="dropdown-content">
+        <div className="dropdown-content">
           <Link to="/bar">Bars</Link>
           <Link to="/restaurant">Restaurants</Link>
           <Link to="/retail">Retail Spaces</Link>
