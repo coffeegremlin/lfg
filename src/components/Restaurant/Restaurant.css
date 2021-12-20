@@ -94,7 +94,7 @@
     bottom: 0;
     right: 0;
     width: 45px;
-    height: 15px;
+    height: 18px;
     background-color: #fff;
     border-radius: 10px;
     transform: rotateZ(0);
@@ -120,16 +120,16 @@
     transform: rotateZ(0);
 }
 
-#s-cover:hover .res-search span:before
+#s-cover:hover .restaurant-search span:before
 {
     bottom: 11px;
-    transform: rotateZ(52deg);
+    transform: rotateZ(-82deg);
 }
 
 #s-cover:hover .restaurant-search span:after
 {
     bottom: -11px;
-    transform: rotateZ(-52deg);
+    transform: rotateZ(52deg);
 }
 
 #s-cover:hover .restaurant-search span:before, #s-cover:hover .restaurant-search span:after
@@ -137,6 +137,7 @@
     right: -6px;
     width: 40px;
     background-color: #fff;
+    transform: rotateZ(-52deg);
 }
 
 .res-header {
@@ -151,9 +152,10 @@
   margin: 50px;
   display: flex;
   justify-content: space-between;
-  flex-direction: ;
   align-items: center;
   flex-wrap: wrap;
+  margin: 20px;
+  padding: 20px;
 }
 
 .card-child {

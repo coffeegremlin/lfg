@@ -62,6 +62,7 @@ const Bar = () => {
       <>
         <div>
         <h2 className='bar-header'>Where are we thinking of having a drink?</h2>
+
           <form className='search-form'
             autoComplete="off"
             onSubmit={handleSubmit}
@@ -85,10 +86,10 @@ const Bar = () => {
             </div>
           </form>
         </div>
+
         <div className='top-half'>
           {results.length ? 
             <>
-            
             <div className="bar-cards daddy">
               {results.map((bar, idx) =>
               <div className="card-child" key={bar._id}>
@@ -108,7 +109,7 @@ const Bar = () => {
             :
             <h3></h3>
           }
-        
+        </div>
         {/* Add in twitter timelines for bar places on righthand side. */}
         <div className='twitter-feed'>
         <Timeline
