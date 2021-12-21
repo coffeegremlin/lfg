@@ -157,6 +157,7 @@
 }
 
 .card-child {
+    color: white;
   background: rgba(57, 23, 15, 0.5);
   display: flex;
   justify-content: space-between;
