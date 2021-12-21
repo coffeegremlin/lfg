@@ -46,9 +46,8 @@ const EventForm = props => {
       required
       name="isTournament"
       autoComplete='off'
-      placeholder='yes/no'
+      placeholder='Tournament'
       value={props.event}
-      onChange={(e) => props.setEvent(e.target.value)}
       />
       {/* sched activities */}
       <input
