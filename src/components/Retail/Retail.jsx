@@ -99,6 +99,8 @@ const Retail = () => {
                 </h3>}
                 <p>{retail.address}</p>
                 <p>{retail.phone}</p>
+                <p>{retail.location.address1}</p>
+                <p>{retail.location.city}, {retail.location.zip_code}</p>
                 <p>Rating: {retail.rating}</p> 
               </div>
               )}
