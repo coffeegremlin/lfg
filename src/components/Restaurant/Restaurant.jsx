@@ -101,7 +101,7 @@ const Restaurant = () => {
                 <p>{restaurant.phone}</p>
                 <p>{restaurant.location.address1}</p>
                 <p>{restaurant.location.city}, {restaurant.location.zip_code}</p>
-                <p>{restaurant.rating}</p> 
+                <p>Rating: {restaurant.rating}</p> 
               </div>
               )}
             </div>
