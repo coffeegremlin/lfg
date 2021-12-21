@@ -38,7 +38,6 @@ const EventForm = props => {
       autoComplete='off'
       placeholder='Event Name'
       value={props.event}
-      onChange={(e) => props.setEvent(e.target.value)}
       />
       {/* tournament input */}
       <input
@@ -46,9 +45,8 @@ const EventForm = props => {
       required
       name="isTournament"
       autoComplete='off'
-      placeholder='yes/no'
+      placeholder='Tournament'
       value={props.event}
-      onChange={(e) => props.setEvent(e.target.value)}
       />
       {/* sched activities */}
       <input
@@ -56,9 +54,8 @@ const EventForm = props => {
       required
       name="eventActivities"
       autoComplete='off'
-      placeholder='activity'
+      placeholder='Activity'
       value={props.event}
-      onChange={(e) => props.setEvent(e.target.value)}
       />
       {/* address */}
       <input
@@ -66,9 +63,8 @@ const EventForm = props => {
       required
       name="eventAddress"
       autoComplete='off'
-      placeholder='address'
+      placeholder='Address'
       value={props.event}
-      onChange={(e) => props.setEvent(e.target.value)}
       />
       {/* date */}
       <input
@@ -76,9 +72,8 @@ const EventForm = props => {
       required
       name="eventDate"
       autoComplete='off'
-      placeholder='date'
+      placeholder='Date'
       value={props.event}
-      onChange={(e) => props.setEvent(e.target.value)}
       />
       {/* info */}
       <input
@@ -86,9 +81,8 @@ const EventForm = props => {
       required
       name="eventInfo"
       autoComplete='off'
-      placeholder='information'
+      placeholder='Information'
       value={props.event}
-      onChange={(e) => props.setEvent(e.target.value)}
       />
       <button type="submit">Submit</button>
     </form>
