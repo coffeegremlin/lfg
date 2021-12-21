@@ -20,3 +20,7 @@ const Events = props => {
 }
 
 export default Events
+
+// new component that has all events in here
+// store events in here (have access everything (compone/form))
+//handleDelete

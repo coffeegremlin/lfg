@@ -1,88 +1,99 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import * as eventService from  '../../services/eventService'
 
-const EventForm = props => {
+const EventForm = (props) => {
   const [eventData, setEventData] = useState({
     name: '',
-    tournament:'',
-    activity:'',
+    tournaments:'',
+    scheduledActivities:'',
+    address:'',
+    date:'',
     info:'',
   })
 
-  const handleChange = e => {
-    props.updateEvent('')
+  const handleUpdate = (e) => {
+    console.log(props.updateEvent)
+    // props.updateEvent('')
     setEventData({
       ...eventData,
       [e.target.name]: e.target.value,
     })
   }
 
-  // const handleSubmit = async e => {
-  //   e.preventDefault()
-  //   try {
-  //    const eventSubmit = await 
-  //   }
-  // }
+  const handleSubmit = async e => {
+    e.preventDefault()
+    console.log(eventData)
+    // props.handleUpdate(eventData)
+    eventService.createEvent(eventData)
+  }
 
-  const { name, tournament, activity, info } = eventData
+  
 
   return(
-    <form className="event-form" onSubmit={props.handleCreateEvent}>
+    <form className="event-form" onSubmit={handleSubmit}>
       <div className="event-name">
       </div>
 
       <input
       type="text"
       required
-      name="eventName"
+      name="name"
       autoComplete='off'
       placeholder='Event Name'
-      value={props.event}
+      value={eventData.name}
+      onChange={handleUpdate}
       />
       {/* tournament input */}
       <input
       type="text"
       required
-      name="isTournament"
+      name="tournaments"
       autoComplete='off'
       placeholder='Tournament'
-      value={props.event}
+      value={eventData.tournaments}
+      onChange={handleUpdate}
       />
       {/* sched activities */}
       <input
       type="text"
       required
-      name="eventActivities"
+      name="scheduledActivities"
       autoComplete='off'
       placeholder='Activity'
-      value={props.event}
+      value={eventData.scheduledActivities}
+
+      onChange={handleUpdate}
       />
       {/* address */}
       <input
       type="text"
       required
-      name="eventAddress"
+      name="address"
       autoComplete='off'
       placeholder='Address'
-      value={props.event}
+      value={eventData.address}
+      onChange={handleUpdate}
       />
       {/* date */}
       <input
       type="text"
       required
-      name="eventDate"
+      name="date"
       autoComplete='off'
       placeholder='Date'
-      value={props.event}
+      value={eventData.date}
+      onChange={handleUpdate}
       />
       {/* info */}
       <input
       type="text"
       required
-      name="eventInfo"
+      name="info"
       autoComplete='off'
       placeholder='Information'
-      value={props.event}
+      value={eventData.info}
+      onChange={handleUpdate}
       />
       <button type="submit">Submit</button>
     </form>

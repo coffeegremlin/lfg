@@ -11,7 +11,7 @@ export const getAllEvents = async () => {
   }
 }
 
-export const createEvent = async (Event) => {
+export const createEvent = async (event) => {
   try {
     const res = await fetch(BASE_URL, {
       method: 'POST',
@@ -19,7 +19,7 @@ export const createEvent = async (Event) => {
         'content-type': 'application/json',
         'Authorization': `Bearer ${tokenService.getToken()}`
       },
-      body: JSON.stringify(Event)
+      body: JSON.stringify(event)
     })
     const data = await res.json()
     return data
@@ -28,9 +28,9 @@ export const createEvent = async (Event) => {
   }
 }
 
-export const updateEvent = async (EventId) => {
+export const updateEvent = async (eventId) => {
   try {
-    const res = await fetch(`${BASE_URL}${EventId}`, {
+    const res = await fetch(`${BASE_URL}${eventId}`, {
       method: "PUT",
       headers: {
         'content-type': 'application/json',
@@ -44,9 +44,9 @@ export const updateEvent = async (EventId) => {
   }
 }
 
-export const deleteEvent = async (EventId) => {
+export const deleteEvent = async (eventId) => {
   try {
-    await fetch(`${BASE_URL}${EventId}`, {
+    await fetch(`${BASE_URL}${eventId}`, {
       method: 'DELETE',
       headers: { 'Authorization': 'Bearer ' + tokenService.getToken() }
     })
@@ -55,9 +55,9 @@ export const deleteEvent = async (EventId) => {
   }
 }
 
-export const getEventById = async (EventId) => {
+export const getEventById = async (eventId) => {
   try {
-    const res = await fetch(`${BASE_URL}${EventId}`)
+    const res = await fetch(`${BASE_URL}${eventId}`)
     const data = await res.json()
     return data
   } catch (error) {
