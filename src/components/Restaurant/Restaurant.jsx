@@ -99,6 +99,8 @@ const Restaurant = () => {
                 </h3>}
                 <p>{restaurant.address}</p>
                 <p>{restaurant.phone}</p>
+                <p>{restaurant.location.address1}</p>
+                <p>{restaurant.location.city}, {restaurant.location.zip_code}</p>
                 <p>{restaurant.rating}</p> 
               </div>
               )}
