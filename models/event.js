@@ -9,7 +9,7 @@ const eventSchema = new Schema(
       required: true
     },
     tournaments: {
-      type: Boolean,
+      type: String,
       required: true
     },
     scheduledActivities: {
@@ -32,7 +32,7 @@ const eventSchema = new Schema(
 )
 
 
-const Event = mongoose.model("Bar", eventSchema)
+const Event = mongoose.model("Event", eventSchema)
 
 export {
   Event

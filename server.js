@@ -30,7 +30,7 @@ app.use('/api/auth', authRouter)
 app.use('/api/retail', retailRouter)
 app.use('/api/restaurant', restaurantRouter)
 app.use('/api/bar', barRouter)
-app.use('/event', eventRouter)
+app.use('/api/events', eventRouter)
 
 app.get('/*', function (req, res) {
   res.sendFile(
