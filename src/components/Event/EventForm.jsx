@@ -38,7 +38,6 @@ const EventForm = props => {
       autoComplete='off'
       placeholder='Event Name'
       value={props.event}
-      
       />
       {/* tournament input */}
       <input
@@ -55,9 +54,8 @@ const EventForm = props => {
       required
       name="eventActivities"
       autoComplete='off'
-      placeholder='activity'
+      placeholder='Activity'
       value={props.event}
-      onChange={(e) => props.setEvent(e.target.value)}
       />
       {/* address */}
       <input
