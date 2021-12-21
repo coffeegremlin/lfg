@@ -26,7 +26,7 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
           <Link to="/bar">Bars</Link>
           <Link to="/restaurant">Restaurants</Link>
           <Link to="/retail">Retail Spaces</Link>
-          <a href="/event">Events</a>
+          <Link to="/event">Events</Link>
         </div>
       </div> 
         </nav>
