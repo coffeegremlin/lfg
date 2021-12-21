@@ -39,6 +39,7 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
+  
 
   return (
     <>

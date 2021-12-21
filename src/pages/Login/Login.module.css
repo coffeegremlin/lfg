@@ -1,5 +1,48 @@
 .container {
-  display: flex;
-  align-items: center;
+   display: flex;
+  justify-content: center;
   flex-direction: column;
+  color: white;
+  background-color: gray;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 25%;
+  border: 10px double rgb(177, 164, 164);
+  outline: 5px dashed gray;
+  padding: 10px;
+  margin: 0;
+  font-weight: bold;
+}
+
+h1 {
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input {
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+button {
+  background-color: #dd199c;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+button:hover {
+  color: black;
+  background-color: rgb(242, 208, 98);
+  padding: 15px;
+  border-radius: 20px;
+  cursor: grab;
 }
