@@ -72,9 +72,8 @@ const EventForm = props => {
       required
       name="eventDate"
       autoComplete='off'
-      placeholder='date'
+      placeholder='Date'
       value={props.event}
-      onChange={(e) => props.setEvent(e.target.value)}
       />
       {/* info */}
       <input
