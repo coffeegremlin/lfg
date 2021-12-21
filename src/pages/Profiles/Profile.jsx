@@ -6,18 +6,16 @@ const Profile = ({ profile }) => {
   const location = useLocation()
   const [profileInfo, setProfileInfo] = useState(location.state)
 
-
-
-  console.log("this is a profile", profileInfo)
-
   return (
     <main>
       <h1>{profileInfo.name}'s profile</h1>
-
-
+      <img src={profileInfo.avatar} alt={`${profileInfo.name}'s avatar`} />
+      <div className='profile-info'>
+        <h3>Bio:
+          <p>{profileInfo.bio}</p>
+        </h3>
+      </div>
       {/* add in a place for user photo */}
-
-      {/* add in a bio form */}
 
       {/* add in a place to show favorite place eventually? */}
     </main>
