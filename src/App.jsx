@@ -12,7 +12,7 @@ import Retail from './components/Retail/Retail'
 import Bar from './components/Bar/Bar'
 import Restaurant from './components/Restaurant/Restaurant'
 import Profile from './pages/Profiles/Profile'
-// import Event from './components/EventCard/EventCard'
+import Event from './pages/Event/Event'
 
 
 const App = () => {
@@ -62,7 +62,7 @@ const App = () => {
         <Route path="/retail" element={<Retail />} />
         <Route path="/bar" element={<Bar />} />
         <Route path="/restaurant" element={<Restaurant />} />
-        {/* <Route path="/event" element={<Event />} /> */}
+        <Route path="/event" element={<Event />} />
       </Routes>
     </>
   )

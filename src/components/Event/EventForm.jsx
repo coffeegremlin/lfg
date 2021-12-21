@@ -1,10 +1,34 @@
-import React from 'react'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
-const EventForm = (props) => {
+const EventForm = props => {
+  const [eventData, setEventData] = useState({
+    name: '',
+    tournament:'',
+    activity:'',
+    info:'',
+  })
+
+  const handleChange = e => {
+    props.updateEvent('')
+    setEventData({
+      ...eventData,
+      [e.target.name]: e.target.value,
+    })
+  }
+
+  // const handleSubmit = async e => {
+  //   e.preventDefault()
+  //   try {
+  //    const eventSubmit = await 
+  //   }
+  // }
+
+  const { name, tournament, activity, info } = eventData
+
   return(
     <form className="event-form" onSubmit={props.handleCreateEvent}>
       <div className="event-name">
-        <label>Create an Event</label>
       </div>
 
       <input
@@ -69,6 +93,7 @@ const EventForm = (props) => {
       <button type="submit">Submit</button>
     </form>
   )
+
 }
 
 export default EventForm
