@@ -104,6 +104,7 @@ const Bar = () => {
                 <p>{bar.location.address1}</p>
                 <p>{bar.location.city}, {bar.location.zip_code}</p>
                 <p>Rating: {bar.rating}</p> 
+                <p>Price: {bar.price}</p> 
               </div>
               )}
             </div>
