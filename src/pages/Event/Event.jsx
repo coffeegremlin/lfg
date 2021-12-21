@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import EventForm from '../../components/Event/EventForm'
-import styles from './Event.css'
+// import styles from './Event.css'
 
 const Events = props => {
   const [events, setEvents] = useState([''])

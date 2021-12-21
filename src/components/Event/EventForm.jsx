@@ -17,19 +17,18 @@ const EventForm = props => {
     })
   }
 
-  const handleSubmit = async e => {
-    e.preventDefault()
-    try {
-     
-    }
-  }
+  // const handleSubmit = async e => {
+  //   e.preventDefault()
+  //   try {
+  //    const eventSubmit = await 
+  //   }
+  // }
 
   const { name, tournament, activity, info } = eventData
 
   return(
     <form className="event-form" onSubmit={props.handleCreateEvent}>
       <div className="event-name">
-        <label>Create an Event</label>
       </div>
 
       <input
