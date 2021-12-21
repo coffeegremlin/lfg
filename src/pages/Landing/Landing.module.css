@@ -1,6 +1,16 @@
-body {
-  font-family: monospace;
-  background-image: url('https://i.ibb.co/fp9fhBX/785507.png');
-  background-repeat: repeat-y;
-  background-size: cover;
-}
+/* main {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    opacity: 0;
+    background-color: gray;
+    z-index: 0;
+    left: 40%;
+    line-height: 100px;
+    position: absolute;
+    top: 60%;
+    width: 25%;
+    border: 10px double rgb(177, 164, 164);
+    outline: 5px dashed gray;
+    z-index: 999px;
+} */

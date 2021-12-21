@@ -1,5 +1,9 @@
 .container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  background-color: gray;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 25%;
+  border: 10px double rgb(177, 164, 164);
+    outline: 5px dashed gray;
 }

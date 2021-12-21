@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import './Nav.css'
 import '../../pages/Landing/Landing.module.css'
 
+
 const NavBar = ({ user, handleLogout, userProfile }) => {
   return (
     <>
@@ -43,4 +44,3 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
 }
 
 export default NavBar
-
