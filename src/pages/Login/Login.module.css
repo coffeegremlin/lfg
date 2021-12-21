@@ -1,14 +1,20 @@
+
+body {
+  font-family: monospace;
+  background-image: url('https://soranews24.com/wp-content/uploads/sites/3/2015/07/tumblr_nr2569nqx01qze3hdo1_r2_500.gif');
+}
+
 .container {
-   display: flex;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   color: white;
   background-color: gray;
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 40%;
   width: 25%;
-  border: 10px double rgb(177, 164, 164);
+  border: 10px double rgb(190, 175, 204);
   outline: 5px dashed gray;
   padding: 10px;
   margin: 0;
@@ -45,4 +51,8 @@ button:hover {
   padding: 15px;
   border-radius: 20px;
   cursor: grab;
+}
+
+li {
+  list-style: none;
 }

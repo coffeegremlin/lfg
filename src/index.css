@@ -1,8 +1,9 @@
 body {
   font-family: monospace;
-  background-image: url('https://media4.giphy.com/media/wOs4QlRl3zMnVmXgnx/giphy.gif?cid=790b76111d8b042b9e56d5cc12df7d051926abdb06241b76&rid=giphy.gif&ct=g');
-  background-size: cover;
+  background-image: url('https://soranews24.com/wp-content/uploads/sites/3/2015/07/tumblr_nr2569nqx01qze3hdo1_r2_500.gif');
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: 2200px 1200px;
 }
 
 

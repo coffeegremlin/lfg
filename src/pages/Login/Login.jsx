@@ -2,6 +2,7 @@ import { useState } from 'react'
 import LoginForm from '../../components/LoginForm/LoginForm'
 import styles from './Login.module.css'
 
+
 const LoginPage = props => {
   const [message, setMessage] = useState([''])
 
@@ -10,6 +11,7 @@ const LoginPage = props => {
   }
 
   return (
+  <body>
     <main className={styles.container}>
       <h1>Log In</h1>
       <p>{message}</p>
@@ -18,6 +20,7 @@ const LoginPage = props => {
         updateMessage={updateMessage}
       />
     </main>
+    </body>
   )
 }
 

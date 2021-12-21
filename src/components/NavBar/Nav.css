@@ -23,14 +23,14 @@
     -webkit-margin-after: 0px;
     margin-top: 0px;
     margin-right: auto;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-left: auto;
-    height: 100px;
+    height: 190px;
     width:100%;
     position: relative; /* <-- Added */
     z-index: 1; /* <-- Added */
     opacity: 0.65;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     
 }
 
@@ -39,14 +39,13 @@
   font-size: 30x;
   color: white;
   text-align: center;
-  padding: 14px 16px 10px 14px;
+  padding: 14px 96px 10px 24px;
   text-decoration: none;
 }
 
 .dropdown {
   font-size: 30px;
   position: absolute;
-  padding-bottom: 90px;
   text-align: center;
 }
 
@@ -58,7 +57,6 @@
   text-align: center;
   background-color: inherit;
   font-family: inherit;
-  display: block;
   margin-left: auto;
 }
 
@@ -102,13 +100,13 @@ ul.login-box {
     margin: 0;
     font-weight: bold;
     opacity: 0.85;
-    background-color: gray;
+    background-color: #a09da3;
     left: 40%;
     line-height: 100px;
     position: absolute;
-    top: 30%;
+    top: 35%;
     width: 25%;
-    border: 10px double rgb(177, 164, 164);
+    border: 10px double #2E1A47;
     outline: 5px dashed gray;
 }
 
@@ -123,4 +121,8 @@ a:hover {
   background-color: rgb(242, 208, 98);
   padding: 15px;
   border-radius: 20px;
+}
+
+li {
+  margin: 12px;
 }
