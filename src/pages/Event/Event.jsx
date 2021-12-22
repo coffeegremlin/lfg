@@ -52,8 +52,8 @@ const Events = props => {
             {event.info}<br></br>
             </p>
 
-            <button onClick={()=>handleDeleteEvent(event._id)} >Delete</button>
-            <button onClick={()=>selectEventToUpdate(event)} >Update</button>
+            <button id='deleteBtn' onClick={()=>handleDeleteEvent(event._id)} >Delete</button>
+            <button id='updateBtn' onClick={()=>selectEventToUpdate(event)} >Update</button>
 
 
           </div>
