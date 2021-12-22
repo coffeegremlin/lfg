@@ -8,10 +8,6 @@ const eventSchema = new Schema(
       type: String,
       required: true
     },
-    tournaments: {
-      type: String,
-      required: true
-    },
     scheduledActivities: {
       type: String,
       required: true
