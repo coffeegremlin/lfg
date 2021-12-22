@@ -225,10 +225,9 @@
     height: 100vh;
       width: 100%;
       font-family: monospace;
-  background-image: url('https://i.ibb.co/fp9fhBX/785507.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-
+    background-image: url('https://i.ibb.co/fp9fhBX/785507.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;

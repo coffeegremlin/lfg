@@ -110,7 +110,7 @@ const Retail = () => {
             :
             <h3></h3>
           }
-        </div>
+        
         {/* Add in twitter timelines for retail places on righthand side. like gamestop, newegg, polygon, warhammer, etc. */}
         <div className='twitter-feed'>
         <Timeline
@@ -143,6 +143,7 @@ const Retail = () => {
             width: '400'
           }}
         />
+        </div>
         </div></div>
       </>
       )
