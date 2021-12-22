@@ -46,7 +46,13 @@ const Events = props => {
         <>
           {events.map(event=>
           <div>
-            <p class="user-name" key={event._id} state={event} to="/events">{event.name}</p>
+            <p class="user-name" key={event._id} state={event} to="/events">
+            {event.name}<br></br>
+            {event.scheduledActivities}<br></br>
+            {event.address}<br></br>
+            {event.date}<br></br>
+            {event.info}<br></br>
+            </p>
             <button onClick={()=>handleDeleteEvent(event._id)} type="submit">Delete</button>
             <button onClick={()=>handleUpdateEvent(event._id)} type="submit">Update</button>
           </div>
