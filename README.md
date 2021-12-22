@@ -13,4 +13,4 @@ Contributors
 
 | [Kate](https://github.com/SullyDurgin) | [Scotty](https://github.com/Scotty-Cloud) |
 | :---------: | :---------: | 
-| ![kate](src/Assets/sprites/kate.png "kateSprite")  | ![Scotty](src/Assets/sprites/scottyGhost.png "scottySprite") 
+| ![kate](src/Assets/sprites/kate.png "kateSprite")  | ![Scotty](src/Assets/sprites/scottyghost.png "scottySprite") 
