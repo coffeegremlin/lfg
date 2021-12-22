@@ -1,0 +1,44 @@
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.current-members {
+  border-top: solid;
+  padding-top: 35px;
+}
+
+.user-name {
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+.profiles-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.profile-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 15px double;
+  width: 10%;
+  height: 45%;
+  margin: 10px;
+  background:  rgba(70, 87, 94, 0.8);
+}
+
+.profiles-avatar {
+  border: 12px solid gray;
+  outline: solid black;
+  border-radius: 80px;
+  padding: 5px;
+  margin: 12px;
+  width: 100px;
+}

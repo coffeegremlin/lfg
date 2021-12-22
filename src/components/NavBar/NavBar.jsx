@@ -14,6 +14,7 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
         </div>
         <div className='outer-container'>
         <div className='nav-route'>
+          <p><Link to="/">Home</Link></p>
         <p> 
           <div className="dropdown">
               <button className="dropbtn">Topics of Interest
@@ -26,7 +27,6 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
             </div>
           </div> 
         </p>
-            <p><Link to="/">Home</Link></p>
             <p><Link to="/profiles">Profiles</Link></p>
             <p><Link to="/profile" state={userProfile}>My Profile</Link></p>
             <p><Link to="/chat">Community Chat</Link></p>
