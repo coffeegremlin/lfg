@@ -2,20 +2,17 @@ import { useState, useEffect } from 'react'
 import EventForm from '../../components/Event/EventForm'
 import * as eventService from '../../services/eventService.js'
 import './Event.css'
+import UpdateEvent from '../../components/Event/UpdateEvent'
 
 import { getAllEvents, deleteEvent, updateEvent } from '../../services/eventService'
 
 const Events = props => {
   const [events, setEvents] = useState([])
+  const [selectedEvent, setSelectedEvent] = useState(null)
 
-  const handleUpdateEvent = async (eventId) => {
-    console.log(eventId)
-    try{
-      await updateEvent(eventId)
-      setEvents(events.filter((event)=>event._id))
-    }catch (error) {
-      throw error
-    }
+  const selectEventToUpdate = (event) => {
+    console.log('hello')
+    setSelectedEvent(event)
   }
 
   const handleDeleteEvent = async (eventId) => {
@@ -39,6 +36,7 @@ const Events = props => {
 
 
   return (
+    
     <main>
       <h1>Create an Event</h1>
       <EventForm setEvents={setEvents} events={events} {...props} getAllEvents={eventService.getAllEvents} />
@@ -46,30 +44,35 @@ const Events = props => {
         <>
           {events.map(event=>
           <div>
-            <p class="user-name" key={event._id} state={event} to="/events">
+            <p className="user-name" key={event._id} state={event} to="/events">
             {event.name}<br></br>
             {event.scheduledActivities}<br></br>
             {event.address}<br></br>
             {event.date}<br></br>
             {event.info}<br></br>
             </p>
-            <button onClick={()=>handleDeleteEvent(event._id)} type="submit">Delete</button>
-            <button onClick={()=>handleUpdateEvent(event._id)} type="submit">Update</button>
+            <button onClick={()=>handleDeleteEvent(event._id)} >Delete</button>
+            <button onClick={()=>selectEventToUpdate(event)} >Update</button>
           </div>
             
           )}
-        
+         {selectedEvent && 
+           <UpdateEvent 
+           selectedEvent={selectedEvent}
+           setSelectedEvent={setSelectedEvent}
+           setEvents={setEvents}
+           events={events}
+           />
+         }
         </>
       :
         <p>No events yet</p>
       } 
     </main>
+   
+    
 
   )
 }
 
 export default Events
-
-// new component that has all events in here
-// store events in here (have access everything (compone/form))
-// handleDelete
