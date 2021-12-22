@@ -2,8 +2,6 @@
 main {
   width: 100%;
 }
-
-
 .event-form {
   display: flex;
   justify-content: space-between;
@@ -13,8 +11,8 @@ main {
   margin-bottom: 20px;
   width: 100%;
   background:  rgba(70, 87, 94, 0.8);
-  margin-left: 800px;
-  margin-right: 800px;
+  margin-left: 400px;
+  margin-right: 400px;
   border: 5px solid;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
