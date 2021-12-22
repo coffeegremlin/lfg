@@ -37,11 +37,6 @@ const UpdateEvent = (props) => {
       info:props.selectedEvent.info,
     })
   },[props.selectedEvent])
-  // name: props.selectedEvent.name,
-  // scheduledActivities:props.selectedEvent.scheduledActivities,
-  // address:props.selectedEvent.address,
-  // date:props.selectedEvent.date,
-  // info:props.selectedEvent.info,
 
   return(
     <form className="event-form" onSubmit={handleUpdate}>
@@ -65,7 +60,6 @@ const UpdateEvent = (props) => {
       autoComplete='off'
       placeholder='Activity'
       value={eventData.scheduledActivities}
-
       onChange={handleChange}
       />
       {/* address */}
@@ -101,7 +95,6 @@ const UpdateEvent = (props) => {
       <button type="submit">Submit</button>
     </form>
   )
-
 }
 
 export default UpdateEvent

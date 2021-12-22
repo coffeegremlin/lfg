@@ -34,7 +34,6 @@ const Events = props => {
     return () => { setEvents([]) }
   }, [])
 
-
   return (
     
     <main>
@@ -51,11 +50,8 @@ const Events = props => {
             {event.date}<br></br>
             {event.info}<br></br>
             </p>
-
             <button id='deleteBtn' onClick={()=>handleDeleteEvent(event._id)} >Delete</button>
             <button id='updateBtn' onClick={()=>selectEventToUpdate(event)} >Update</button>
-
-
           </div>
             
           )}
@@ -72,9 +68,6 @@ const Events = props => {
         <p>No events yet</p>
       } 
     </main>
-   
-    
-
   )
 }
 
