@@ -6,7 +6,6 @@ import * as eventService from  '../../services/eventService'
 const EventForm = (props) => {
   const [eventData, setEventData] = useState({
     name: '',
-    tournaments:'',
     scheduledActivities:'',
     address:'',
     date:'',
@@ -44,16 +43,6 @@ const EventForm = (props) => {
       autoComplete='off'
       placeholder='Event Name'
       value={eventData.name}
-      onChange={handleUpdate}
-      />
-      {/* tournament input */}
-      <input
-      type="text"
-      required
-      name="tournaments"
-      autoComplete='off'
-      placeholder='Tournament'
-      value={eventData.tournaments}
       onChange={handleUpdate}
       />
       {/* sched activities */}
