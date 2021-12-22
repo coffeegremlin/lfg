@@ -13,6 +13,8 @@ import Bar from './components/Bar/Bar'
 import Restaurant from './components/Restaurant/Restaurant'
 import Profile from './pages/Profiles/Profile'
 import Event from './pages/Event/Event'
+import Home from './pages/Home/Home'
+
 
 
 const App = () => {

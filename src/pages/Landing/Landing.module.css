@@ -1,16 +1,19 @@
-/* main {
-    padding: 0;
-    margin: 0;
-    font-weight: bold;
-    opacity: 0;
-    background-color: gray;
-    z-index: 0;
-    left: 40%;
-    line-height: 100px;
-    position: absolute;
-    top: 60%;
-    width: 25%;
-    border: 10px double rgb(177, 164, 164);
-    outline: 5px dashed gray;
-    z-index: 999px;
-} */
+
+
+.about-card {
+  font-size: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-body {
+    background:  rgba(154, 159, 161, 0.8);
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 30px;
+    border: solid;
+    padding: 85px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
