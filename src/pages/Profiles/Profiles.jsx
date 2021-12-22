@@ -19,7 +19,7 @@ const Profiles = () => {
       {profiles.length ? 
         <>
           {profiles.map(profile=>
-            <p className='profile-cards'><Link className="user-name" key={profile._id} state={profile} to="/profile">{profile.name}</Link><img className='profiles-avatar' src={profile.avatar} alt={`${profile.name}'s avatar`} /></p>
+            <p className='profile-cards'><Link className="user-names" key={profile._id} state={profile} to="/profile">{profile.name}</Link><img className='profiles-avatar' src={profile.avatar} alt={`${profile.name}'s avatar`} /></p>
           )}
         
         </>
