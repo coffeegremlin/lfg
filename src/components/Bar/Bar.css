@@ -1,4 +1,4 @@
-
+@media only screen and (min-width: 600px) {
 .tb
 {
 
@@ -202,4 +202,213 @@
   margin-left: 0px;
   padding: 0;
   
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+body {
+  font-family: monospace;
+  background-image: url('https://soranews24.com/wp-content/uploads/sites/3/2015/07/tumblr_nr2569nqx01qze3hdo1_r2_500.gif');
+  text-align: center;
+  background-repeat: repeat-y;
+  background-size: 2180px 1980px;
+}
+
+
+  .twitter-feed {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: 50%;
+  margin-left: 0px;
+  padding: 0;
+  
+}
+
+.bar-header {
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.tb
+{
+
+    display: table;
+    width: 50%;
+}
+
+.td
+{
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+
+.city-input, .bar-search
+{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-family: Nunito;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.search-form
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 96px;
+}
+
+.city-input[type="text"]
+{
+    width: 100%;
+    height: 96px;
+    font-size: 50px;
+    line-height: 1;
+    border: solid;
+    border-radius: 20px;
+}
+
+#s-cover
+{
+    width: 1px;
+    padding-left: 35px;
+}
+
+.bar-search
+{
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 112px;
+    cursor: pointer;
+}
+
+#s-circle
+{
+    position: relative;
+    top: -8px;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    margin-top: 0;
+    border-width: 10px;
+    border: 15px solid #fff;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.5s ease all;
+}
+
+.bar-search span
+{
+    position: absolute;
+    top: 68px;
+    left: 22px;
+    display: block;
+    width: 48px;
+    height: 19px;
+    background-color: transparent;
+    border-radius: 10px;
+    transform: rotateZ(52deg);
+    transition: 0.5s ease all;
+}
+
+.bar-search span:before, .bar-search span:after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: rotateZ(0);
+    transition: 0.5s ease all;
+}
+
+#s-cover:hover #s-circle
+{
+    top: -1px;
+    width: 67px;
+    height: 15px;
+    border-width: 0;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+#s-cover:hover span
+{
+    top: 50%;
+    left: 56px;
+    width: 25px;
+    margin-top: -9px;
+    transform: rotateZ(0);
+}
+
+#s-cover:hover .bar-search span:before
+{
+    bottom: 11px;
+    transform: rotateZ(-82deg);
+}
+
+#s-cover:hover .bar-search span:after
+{
+    bottom: -11px;
+    transform: rotateZ(52deg);
+}
+
+#s-cover:hover .bar-search span:before, #s-cover:hover .bar-search span:after
+{
+    right: -6px;
+    width: 40px;
+    background-color: #fff;
+    transform: rotateZ(-52deg);
+}
+
+.bar-cards {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.card-child {
+  color: white;
+  background: rgba(57, 23, 15, 0.5);
+  border: double rgb(97, 134, 157);
+  border-radius: 20px;
+
+}
+
+#bar-img {
+  margin-right: 18px;
+    object-fit: cover;
+    border-radius: 6px;
+    height: 30vw;
+    max-height: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    min-width: 100px;
+}
+
+
+.top-half {
+ float: left;
+ width: 50%;
+
+}
+
+
 }
