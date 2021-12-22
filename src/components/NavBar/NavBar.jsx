@@ -21,7 +21,7 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
           </ul>
           
             <div className="dropdown">
-          <button className="dropbtn">Topics of Interest
+          <button className="dropbtn">Topics of Interest &#8623;
           </button>
         <div className="dropdown-content">
           <Link to="/bar">Bars</Link>
