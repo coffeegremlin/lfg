@@ -7,6 +7,17 @@ body {
   background-size: 2180px 1980px;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(129, 74, 115);
+  border-top: solid black;
+  height: 50px;
+  color: white;
+  text-align: center;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

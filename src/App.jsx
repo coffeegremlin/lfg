@@ -43,6 +43,9 @@ const App = () => {
   return (
     <>
       <NavBar user={user} userProfile={userProfile} handleLogout={handleLogout} />
+      <div class="footer">
+            <p>Footer</p>
+        </div>
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
         <Route path="/chat" element={<Chat user={user} />} />
