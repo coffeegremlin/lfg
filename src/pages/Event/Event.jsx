@@ -52,8 +52,7 @@ const Events = props => {
             </p>
             <button id='deleteBtn' onClick={()=>handleDeleteEvent(event._id)} >Delete</button>
             <button id='updateBtn' onClick={()=>selectEventToUpdate(event)} >Update</button>
-          </div>
-            
+          </div>           
           )}
          {selectedEvent && 
            <UpdateEvent 
