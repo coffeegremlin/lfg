@@ -1,4 +1,4 @@
-import './Landing.module.css'
+import './Landing.css'
 
 const Landing = props => {
 
