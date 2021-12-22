@@ -1,4 +1,11 @@
 import './Landing.css'
+import greenPotion from '../../Assets/smallIcons/greenPotion.png'
+import heart from '../../Assets/smallIcons/heart.png'
+import purpleGem from '../../Assets/smallIcons/purpleGem.png'
+import chicken from '../../Assets/smallIcons/chicken.png'
+import skull from '../../Assets/smallIcons/key.png'
+import redPotion from '../../Assets/smallIcons/redPotion.png'
+import joyStick from '../../Assets/smallIcons/joyStick.png'
 
 const Landing = props => {
 
@@ -7,6 +14,17 @@ const Landing = props => {
    
    <main className= 'about-card'>
       <h1 className='about-header'> Looking for group? You just found one.</h1>
+      <div className='icons'>
+       
+          <img className='icon' src={greenPotion} alt="greenPotion"/>
+        <img className='icon' src={heart} alt="heart"/>
+        <img className='icon' src={purpleGem} alt="greenPotion"/>
+        <img className='icon' src={joyStick} alt="heart"/>
+        <img className='icon' src={chicken} alt="heart"/>
+        <img className='icon' src={skull} alt="greenPotion"/>
+        <img className='icon' src={redPotion} alt="heart"/>
+
+      </div>
       {props.user && 
       <p className='about-body'>
        
