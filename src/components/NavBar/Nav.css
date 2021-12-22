@@ -11,7 +11,7 @@
 }
 
 .our-icon {
-  margin-top: 0;
+  margin-top: -5px;
   padding: 5px;
   width: 80px;
   margin-bottom: 20px;
@@ -211,8 +211,8 @@ width: 10%;
   z-index: 999;  
   -webkit-user-select: none;
   -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #menuToggle a {
