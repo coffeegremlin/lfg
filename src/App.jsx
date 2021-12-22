@@ -13,6 +13,10 @@ import Bar from './components/Bar/Bar'
 import Restaurant from './components/Restaurant/Restaurant'
 import Profile from './pages/Profiles/Profile'
 import Event from './pages/Event/Event'
+import Tay from './Assets/smallIcons/tay.png'
+import Scotty from './Assets/smallIcons/scotty.png'
+import Kate from './Assets/smallIcons/kate.png'
+import Nate from './Assets/smallIcons/nate.png'
 
 
 const App = () => {
@@ -44,7 +48,14 @@ const App = () => {
     <>
       <NavBar user={user} userProfile={userProfile} handleLogout={handleLogout} />
       <div class="footer">
-            <p>Footer</p>
+            <p className='us'>
+
+              <img className='us-icons' src={Nate} alt="nate"/>
+              <img className='us-icons' src={Tay} alt="tay"/>
+              <img className='us-icons' src={Kate} alt="kate"/>
+              <img className='us-icons' src={Scotty} alt="scotty"/>
+
+            </p>
         </div>
       <Routes>
         <Route path="/" element={<Landing user={user} />} />

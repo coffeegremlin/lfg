@@ -16,7 +16,7 @@ const Landing = props => {
       <h1 className='about-header'> Looking for group? You just found one.</h1>
       <div className='icons'>
        
-          <img className='icon' src={greenPotion} alt="greenPotion"/>
+        <img className='icon' src={greenPotion} alt="greenPotion"/>
         <img className='icon' src={heart} alt="heart"/>
         <img className='icon' src={purpleGem} alt="greenPotion"/>
         <img className='icon' src={joyStick} alt="heart"/>
@@ -45,3 +45,4 @@ Of course, for people to show up you have to let them know something's happening
 }
 
 export default Landing
+
