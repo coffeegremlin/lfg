@@ -59,20 +59,20 @@ const Events = props => {
           </div>
             
           )}
-         {selectedEvent && 
-           <UpdateEvent 
-           selectedEvent={selectedEvent}
-           setSelectedEvent={setSelectedEvent}
-           setEvents={setEvents}
-           events={events}
-           />
-         }
+        {selectedEvent && 
+          <UpdateEvent 
+          selectedEvent={selectedEvent}
+          setSelectedEvent={setSelectedEvent}
+          setEvents={setEvents}
+          events={events}
+          />
+        }
         </>
       :
         <p>No events yet</p>
       } 
     </main>
-   
+  
     
 
   )

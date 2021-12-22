@@ -13,10 +13,20 @@ async function getUserProfile() {
   const res = await fetch(`${BASE_URL}/currentuser`, {
     headers: { Authorization: `Bearer ${tokenService.getToken()}` },
   })
-  return await res.json()
+  const userData = await res.json()
+  return userData
+}
+
+async function updateProfile() {
+  const res = await fetch(`${BASE_URL}/currentuser`, {
+    headers: { Authorization: `Bearer ${tokenService.getToken()}` },
+  })
+  const profileData = await res.json()
+  return profileData
 }
 
 export { 
   getAllProfiles,
   getUserProfile,
+  updateProfile,
 }

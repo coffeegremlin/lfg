@@ -11,5 +11,6 @@ const router = Router()
 router.use(decodeUserFromToken)
 router.get('/', checkAuth, profilesCtrl.index)
 router.get('/currentuser', checkAuth, profilesCtrl.showLoggedInUserProfile)
+router.put('/currentuser', checkAuth, profilesCtrl.updateUserProfile)
 
 export { router }

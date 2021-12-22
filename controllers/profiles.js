@@ -18,7 +18,17 @@ function showLoggedInUserProfile(req, res) {
   })
 }
 
+function updateUserProfile(req, res) {
+  Profile.findByIdAndUpdate(req.user.profile, req.body, {new: true})
+  .then(profile => res.status(200).json(profile))
+  .catch(err => {
+    console.log('profile update error', err)
+    res.status(500).json(err)
+  })
+}
+
 export { 
   index,
   showLoggedInUserProfile,
+  updateUserProfile,
 }
