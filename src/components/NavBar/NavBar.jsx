@@ -43,7 +43,7 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
       <div></div>
       <div></div>
     </label>
-    <ul id="menu">
+    {/* <ul id="menu">
       <li><Link to="/">Home</Link></li>
       <li><Link to="/profiles">Profiles</Link></li>
       <li><Link to="/profile" state={userProfile}>My Profile</Link></li>
@@ -53,7 +53,7 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
       <Link to="/retail">Retail Spaces</Link>
        <Link to="/event">Events</Link>
       <li><Link to="" onClick={handleLogout}>Log Out</Link></li>
-    </ul>
+    </ul> */}
   </div>
 </nav>
           
