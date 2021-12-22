@@ -108,7 +108,7 @@ const Restaurant = () => {
             </div>
             </>
             :
-            <h3></h3>
+            <h3> </h3>
           }
         
         {/* Add in twitter timelines for restaurant places on righthand side. */}
