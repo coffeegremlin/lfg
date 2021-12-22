@@ -1,8 +1,7 @@
 main {
   display: flex;
   justify-content: center;
-  padding: 50px;
-  
+  margin: 95px;
 }
 
 .profile-card {
@@ -12,8 +11,9 @@ main {
   flex-direction: column;
   outline: 15px double;
   border: solid;
-  width: 50%;
-  padding: 20px;
+  width: 70%;
+  height: 100%;
+  padding: 10px;
   background:  rgba(70, 87, 94, 0.8);
 }
 
@@ -55,5 +55,6 @@ main {
 .bio-body {
   text-align: center;
   font-size: 20px;
+  height: 250px;
  
 }

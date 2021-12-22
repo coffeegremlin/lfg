@@ -14,7 +14,7 @@ body {
   width: 100%;
   background-color: rgb(129, 74, 115);
   border-top: solid black;
-  height: 120px;
+  height: 80px;
   color: white;
   text-align: center;
   padding: 10px;
@@ -31,7 +31,7 @@ code {
   border: solid rgb(0, 0, 0);
   border-radius: 80px;
   padding: 5px;
-  width: 90px;
+  width: 60px;
   margin-right: 215px;
   margin-left: 90px;
 }
