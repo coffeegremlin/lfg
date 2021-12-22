@@ -11,7 +11,7 @@ if (!localStorage.getItem('username')) return <LoginForm />;
 
   return (
     <ChatEngine
-      height="90vh"
+      height="100vh"
       projectID={projectID}
       userName={localStorage.getItem('username')}
       userSecret={localStorage.getItem('password')}
