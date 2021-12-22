@@ -33,7 +33,7 @@ const Events = props => {
   return (
     <main>
       <h1>Create an Event</h1>
-      <EventForm {...props} getAllEvents={eventService.getAllEvents} />
+      <EventForm setEvents={setEvents} events={events} {...props} getAllEvents={eventService.getAllEvents} />
       {events.length ? 
         <>
           {events.map(event=>
