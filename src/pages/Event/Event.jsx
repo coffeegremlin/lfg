@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import EventForm from '../../components/Event/EventForm'
 import * as eventService from '../../services/eventService.js'
-// import styles from './Event.css'
+import './Event.css'
 
 import { getAllEvents, deleteEvent } from '../../services/eventService'
 
@@ -33,7 +33,7 @@ const Events = props => {
 
 
   return (
-    <main>
+    <main className='event-form'>
       <h1>Create an Event</h1>
       <EventForm setEvents={setEvents} events={events} {...props} getAllEvents={eventService.getAllEvents} />
       {events.length ? 

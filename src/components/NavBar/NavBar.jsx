@@ -8,7 +8,7 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
     <>
       {user ?
     <nav className="navbar">
-      
+
         <div className='welcome-message'>
         <p id="welcome">Welcome, {user.name}</p>
         </div>
@@ -33,7 +33,29 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
             <p><Link to="" onClick={handleLogout}>Log Out</Link></p>
             </div>
       </div>
-          
+<nav role="navigation">
+  <div id="menuToggle"> 
+    <input name="toggle" type="checkbox" />
+    <label for="toggle">
+      <span>menu</span>
+
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
+    <ul id="menu">
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/profiles">Profiles</Link></li>
+      <li><Link to="/profile" state={userProfile}>My Profile</Link></li>
+      <li><Link to="/chat">Community Chat</Link></li>
+      <Link to="/bar">Bars</Link>
+      <Link to="/restaurant">Restaurants</Link>
+      <Link to="/retail">Retail Spaces</Link>
+       <Link to="/event">Events</Link>
+      <li><Link to="" onClick={handleLogout}>Log Out</Link></li>
+    </ul>
+  </div>
+</nav>
           
         </nav>
       :

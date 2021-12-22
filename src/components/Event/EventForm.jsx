@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import Events from '../../pages/Event/Event'
 import * as eventService from  '../../services/eventService'
 
+
 const EventForm = (props) => {
   const [eventData, setEventData] = useState({
     name: '',
@@ -33,7 +34,7 @@ const EventForm = (props) => {
   
 
   return(
-    <form className="event-form" onSubmit={handleSubmit}>
+    <form className="events-form" onSubmit={handleSubmit}>
       <div className="event-name">
       </div>
 
@@ -46,16 +47,7 @@ const EventForm = (props) => {
       value={eventData.name}
       onChange={handleUpdate}
       />
-      {/* tournament input */}
-      <input
-      type="text"
-      required
-      name="tournaments"
-      autoComplete='off'
-      placeholder='Tournament'
-      value={eventData.tournaments}
-      onChange={handleUpdate}
-      />
+   
       {/* sched activities */}
       <input
       type="text"

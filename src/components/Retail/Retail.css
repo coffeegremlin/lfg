@@ -197,3 +197,110 @@
   padding: 0;
   
 }
+
+
+
+
+/* @media only screen and (max-width: 600px) {
+
+
+.retail-header {
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.retail-cards {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: -10px;
+}
+
+.card-child {
+  background: rgba(57, 23, 15, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: double rgb(97, 134, 157);
+  border-radius: 20px;
+  padding: 20px;
+
+}
+
+#retailtaurant-img {
+    margin-right: 18px;
+    object-fit: cover;
+    border-radius: 6px;
+    height: 30vw;
+    max-height: 100px;
+    max-width: 200px;
+    min-height: 100px;
+    min-width: 100px;
+}
+
+.top-half {
+ margin-top: 20px;
+ width: 80%;
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+ margin: 10px;
+
+}
+
+.twitter-feed {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 10%;
+  margin-left: 0px;
+  padding: 1000px;
+  
+}
+
+
+.search-form
+{
+  display: flex;
+  justify-content: center;
+  height: 96px;
+  width: 80%;
+  margin: 20px;
+}
+
+.retail-search span
+{
+    position: absolute;
+    top: 68px;
+    left: 22px;
+    display: block;
+    width: 48px;
+    height: 19px;
+    background-color: transparent;
+    border-radius: 10px;
+    transform: rotateZ(52deg);
+    transition: 0.5s ease all;
+}
+
+.retail-search span:before, .retail-search span:after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: rotateZ(0);
+    transition: 0.5s ease all;
+}
+
+} */
