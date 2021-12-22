@@ -65,4 +65,3 @@ export const getEventById = async (eventId) => {
     throw error
   }
 }
-
