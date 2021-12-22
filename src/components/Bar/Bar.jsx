@@ -110,7 +110,7 @@ const Bar = () => {
             </div>
             </>
             :
-            <h3></h3>
+            <h3> </h3>
           }
         
         {/* Add in twitter timelines for bar places on righthand side. */}

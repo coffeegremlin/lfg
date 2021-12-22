@@ -8,7 +8,6 @@ import human from '../../Assets/Avatars/human.png'
 
 // Component
 import AvatarSelect from '../../pages/Signup/AvatarSelect'
-import Animation from '../Animation'
 
 const SignupForm = props => {
   const navigate = useNavigate()
