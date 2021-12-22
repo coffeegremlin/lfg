@@ -37,7 +37,10 @@ const Events = props => {
       {events.length ? 
         <>
           {events.map(event=>
+          <div>
             <p class="user-name" key={event._id} state={event} to="/events">{event.name}</p>
+          </div>
+            
           )}
         
         </>
