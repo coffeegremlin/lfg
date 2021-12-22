@@ -39,7 +39,7 @@ const Events = props => {
 
 
   return (
-    <main className='event-form'>
+    <main>
       <h1>Create an Event</h1>
       <EventForm setEvents={setEvents} events={events} {...props} getAllEvents={eventService.getAllEvents} />
       {events.length ? 
