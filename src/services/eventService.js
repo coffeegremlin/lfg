@@ -28,14 +28,15 @@ export const createEvent = async (event) => {
   }
 }
 
-export const updateEvent = async (eventId) => {
+export const updateEvent = async (eventId, formData) => {
   try {
     const res = await fetch(`${BASE_URL}${eventId}`, {
       method: "PUT",
       headers: {
         'content-type': 'application/json',
         'Authorization': 'Bearer ' + tokenService.getToken()
-      }
+      },
+      body: JSON.stringify(formData)
     })
     const data = await res.json()
     return data
