@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Events from '../../pages/Event/Event'
 import * as eventService from  '../../services/eventService'
 
 const EventForm = (props) => {
@@ -25,7 +26,8 @@ const EventForm = (props) => {
     e.preventDefault()
     console.log(eventData)
     // props.handleUpdate(eventData)
-    eventService.createEvent(eventData)
+   const newEvent = await eventService.createEvent(eventData)
+   props.setEvents([...props.events, newEvent])
   }
 
   
