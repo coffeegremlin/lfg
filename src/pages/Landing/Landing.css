@@ -1,4 +1,16 @@
 
+.about-header {
+  
+}
+
+.icon {
+  border: solid rgb(0, 0, 0);
+  border-radius: 80px;
+  padding: 5px;
+  width: 80px;
+  margin: 5px;
+}
+
 .about-card {
   font-size: 20px;
     display: flex;
