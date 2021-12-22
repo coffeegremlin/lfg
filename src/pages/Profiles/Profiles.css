@@ -20,7 +20,7 @@ main {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 20px;
+  margin-right: 140px;
 }
 
 .profile-cards {

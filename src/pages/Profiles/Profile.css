@@ -12,6 +12,7 @@ main {
   outline: 15px double;
   border: solid;
   width: 70%;
+  margin-right: 80px;
   height: 100%;
   padding: 10px;
   background:  rgba(70, 87, 94, 0.8);
