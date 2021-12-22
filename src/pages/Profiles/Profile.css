@@ -1,8 +1,20 @@
 main {
   display: flex;
   justify-content: center;
+  padding: 50px;
+  
+}
+
+.profile-card {
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  outline: 15px double;
+  border: solid;
+  width: 50%;
+  padding: 20px;
+  background:  rgba(70, 87, 94, 0.8);
 }
 
 .profile-header {
@@ -13,7 +25,6 @@ main {
   border-bottom-left-radius: 20px;
   margin-bottom: 20px;
   margin-top: 50px;
-  width: 50%;
 }
 
 .profile-avatar {
@@ -26,11 +37,11 @@ main {
 
 .profile-info {
   background:  rgba(154, 159, 161, 0.8);
-  margin-right: 350px;
-  margin-left: 350px;
+  margin-right: 50px;
+  margin-left: 50px;
   margin-top: 30px;
   border: solid;
-  padding: 25px;
+  padding: 85px;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -44,6 +55,5 @@ main {
 .bio-body {
   text-align: center;
   font-size: 20px;
-
  
 }
