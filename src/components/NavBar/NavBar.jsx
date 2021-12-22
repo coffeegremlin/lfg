@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Nav.css'
+import icon from '../../Assets/smallIcons/ourcon.png'
 
 
 
@@ -8,12 +9,13 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
     <>
       {user ?
     <nav className="navbar">
-
+<p><img className='our-icon' src={icon} alt="icon"/></p>
         <div className='welcome-message'>
         <p id="welcome">Welcome, {user.name}</p>
         </div>
         <div className='outer-container'>
         <div className='nav-route'>
+          
           <p><Link to="/">Home</Link></p>
         <p> 
           <div className="dropdown">
