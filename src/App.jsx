@@ -14,7 +14,7 @@ import Restaurant from './components/Restaurant/Restaurant'
 import Profile from './pages/Profiles/Profile'
 import Event from './pages/Event/Event'
 import Tay from './Assets/smallIcons/tay.png'
-import Scotty from './Assets/smallIcons/scotty.png'
+import Scotty from './Assets/smallIcons/scottyghost.png'
 import Kate from './Assets/smallIcons/kate.png'
 import Nate from './Assets/smallIcons/nate.png'
 
