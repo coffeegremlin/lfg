@@ -37,6 +37,8 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
           
         </nav>
       :
+      !user && 
+
         <nav>
           <ul className='login-box'>
             <li><Link to="/login">Log In</Link></li>
@@ -44,6 +46,7 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
           </ul>
         </nav>
       }
+      
     </>
   )
 }
