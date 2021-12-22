@@ -10,19 +10,34 @@
   
 }
 
+.our-icon {
+  margin-top: 0;
+  padding: 5px;
+  width: 80px;
+  margin-bottom: 20px;
+  margin-right: 55px;
+  margin-left: 5px;
+}
+
+
 .welcome-message {
-  color: white;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
 
 }
 
 .outer-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
+  padding-top: 20px;
   width: 100%;
 }
 
 .navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
     background-color: rgb(122, 85, 113);
     -webkit-padding-start: 0px;
     -webkit-margin-before: 0px;
@@ -35,7 +50,7 @@
     width: 100%;
     position: relative; /* <-- Added */
     opacity: 0.95;
-    padding-bottom: 10px;
+    padding-bottom: 29px;
     border-bottom: 15px double rgb(8, 8, 8);
     outline: 10px solid rgb(71, 68, 68);
     
@@ -44,10 +59,11 @@
 .navbar a {
   font-family: monospace;
   font-size: 20px;
+  font-weight: bold;
   color: rgb(255, 255, 255);
   text-decoration: none;
   padding-top: 10px;
-  margin-right: 90px;
+  margin-right: 130px;
 }
 
 .navbar p {
@@ -61,7 +77,8 @@
 }
 
 .dropdown .dropbtn {
-  font-size: 20px;  
+  font-size: 20px;
+  font-weight: bold;  
   border: none;
   outline: none;
   color: white;
