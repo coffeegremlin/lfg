@@ -16,3 +16,24 @@
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+ 
+  .about-card {
+    text-align: center;
+}
+
+.about-body {
+    font-size: 15px;
+    background:  rgba(154, 159, 161, 0.8);
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 30px;
+    border: solid;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+  
+
+}

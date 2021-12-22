@@ -48,6 +48,10 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
       <li><Link to="/profiles">Profiles</Link></li>
       <li><Link to="/profile" state={userProfile}>My Profile</Link></li>
       <li><Link to="/chat">Community Chat</Link></li>
+      <Link to="/bar">Bars</Link>
+      <Link to="/restaurant">Restaurants</Link>
+      <Link to="/retail">Retail Spaces</Link>
+       <Link to="/event">Events</Link>
       <li><Link to="" onClick={handleLogout}>Log Out</Link></li>
     </ul>
   </div>
