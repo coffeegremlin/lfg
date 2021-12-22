@@ -53,8 +53,8 @@ const Events = props => {
             {event.date}<br></br>
             {event.info}<br></br>
             </p>
-            <button onClick={()=>handleDeleteEvent(event._id)} type="submit">Delete</button>
-            <button onClick={()=>handleUpdateEvent(event._id)} type="submit">Update</button>
+           <button className="delete-btn" onClick={()=>handleDeleteEvent(event._id)} type="submit">Delete</button>
+            <button className="update-btn" onClick={()=>handleUpdateEvent(event._id)} type="submit">Update</button>
           </div>
             
           )}
