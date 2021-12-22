@@ -1,21 +1,25 @@
+
+main {
+  width: 100%;
+}
+
+
 .event-form {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
   margin-top: 60px;
+  margin-bottom: 20px;
   width: 100%;
   background:  rgba(70, 87, 94, 0.8);
-  margin-left: 400px;
-  margin-right: 400px;
+  margin-left: 800px;
+  margin-right: 800px;
   border: 5px solid;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
-.events-form {
-  width: 20%;
-}
 
 .user-name {
   display: flex;
