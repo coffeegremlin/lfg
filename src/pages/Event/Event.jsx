@@ -54,14 +54,14 @@ const Events = props => {
             <button id='updateBtn' onClick={()=>selectEventToUpdate(event)} >Update</button>
           </div>           
           )}
-         {selectedEvent && 
-           <UpdateEvent 
-           selectedEvent={selectedEvent}
-           setSelectedEvent={setSelectedEvent}
-           setEvents={setEvents}
-           events={events}
-           />
-         }
+          {selectedEvent && 
+            <UpdateEvent 
+            selectedEvent={selectedEvent}
+            setSelectedEvent={setSelectedEvent}
+            setEvents={setEvents}
+            events={events}
+            />
+          }
         </>
       :
         <p>No events yet</p>

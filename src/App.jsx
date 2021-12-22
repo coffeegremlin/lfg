@@ -46,7 +46,7 @@ const App = () => {
   
   return (
     <>
-      <NavBar user={user} userProfile={userProfile} handleLogout={handleLogout} />
+      <NavBar user={user} userProfile={userProfile} handleLogout={handleLogout}/>
       <div class="footer">
             <p className='us'>
 
