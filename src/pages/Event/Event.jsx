@@ -3,13 +3,19 @@ import EventForm from '../../components/Event/EventForm'
 import * as eventService from '../../services/eventService.js'
 import './Event.css'
 
-import { getAllEvents, deleteEvent } from '../../services/eventService'
+import { getAllEvents, deleteEvent, updateEvent } from '../../services/eventService'
 
 const Events = props => {
   const [events, setEvents] = useState([])
 
-  const updateEvent = evnt => {
-    setEvents(evnt)
+  const handleUpdateEvent = async (eventId) => {
+    console.log(eventId)
+    try{
+      await updateEvent(eventId)
+      setEvents(events.filter((event)=>event._id))
+    }catch (error) {
+      throw error
+    }
   }
 
   const handleDeleteEvent = async (eventId) => {
@@ -42,7 +48,7 @@ const Events = props => {
           <div>
             <p class="user-name" key={event._id} state={event} to="/events">{event.name}</p>
             <button onClick={()=>handleDeleteEvent(event._id)} type="submit">Delete</button>
-            
+            <button onClick={()=>handleUpdateEvent(event._id)} type="submit">Update</button>
           </div>
             
           )}
