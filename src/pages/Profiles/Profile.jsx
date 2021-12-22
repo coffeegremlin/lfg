@@ -9,6 +9,7 @@ const Profile = ({ profile }) => {
 
   return (
     <main>
+      <div className='profile-card'>
       <h1 className='profile-header'>{profileInfo.name}'s profile</h1>
       <img className='profile-avatar' src={profileInfo.avatar} alt={`${profileInfo.name}'s avatar`} />
       <div className='profile-info'>
@@ -19,6 +20,7 @@ const Profile = ({ profile }) => {
       {/* add in a place for user photo */}
 
       {/* add in a place to show favorite place eventually? */}
+      </div>
     </main>
   )
 }
