@@ -13,8 +13,10 @@ const Events = props => {
   }
 
   const handleDeleteEvent = async (eventId) => {
+    console.log(eventId)
     try{
       await deleteEvent(eventId)
+      setEvents(events.filter((event)=>event._id!==eventId))
     } catch (error) {
       throw error
     }
@@ -39,6 +41,8 @@ const Events = props => {
           {events.map(event=>
           <div>
             <p class="user-name" key={event._id} state={event} to="/events">{event.name}</p>
+            <button onClick={()=>handleDeleteEvent(event._id)} type="submit">Delete</button>
+            
           </div>
             
           )}
@@ -56,4 +60,4 @@ export default Events
 
 // new component that has all events in here
 // store events in here (have access everything (compone/form))
-//handleDelete
+// handleDelete
