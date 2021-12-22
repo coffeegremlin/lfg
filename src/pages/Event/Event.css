@@ -38,12 +38,30 @@ input {
   margin: 15px;
 }
 
-#updateBtn {
-  width: 200px;
-  height: 150px;
+#deleteBtn {
+  width: 120px;
+  height: 50px;
+  margin-left: 10px;
 }
 
+
+#deleteBtn:hover {
+   width: 120px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+
+
+#updateBtn {
+  width: 120px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+
 #updateBtn:hover {
-  width: 200px;
-  height: 150px;
+   width: 120px;
+  height: 50px;
+  margin-left: 10px;
 }
