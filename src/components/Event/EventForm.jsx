@@ -27,8 +27,6 @@ const EventForm = (props) => {
     props.setEvents([...props.events, newEvent])
   }
 
-  
-
   return(
     <form className="event-form" onSubmit={handleSubmit}>
       <div className="event-name">
@@ -51,8 +49,7 @@ const EventForm = (props) => {
       autoComplete='off'
       placeholder='Activity'
       value={eventData.scheduledActivities}
-
-      onChange={handleUpdate}
+       onChange={handleUpdate}
       />
       {/* address */}
       <input
@@ -87,7 +84,6 @@ const EventForm = (props) => {
       <button type="submit">Submit</button>
     </form>
   )
-
 }
 
 export default EventForm

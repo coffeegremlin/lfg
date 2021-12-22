@@ -15,8 +15,6 @@ import Profile from './pages/Profiles/Profile'
 import Event from './pages/Event/Event'
 
 
-
-
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
@@ -42,7 +40,6 @@ const App = () => {
     setUser(authService.getUser())
   }
   
-
   return (
     <>
       <NavBar user={user} userProfile={userProfile} handleLogout={handleLogout} />
