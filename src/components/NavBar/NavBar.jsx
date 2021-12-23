@@ -22,7 +22,7 @@ console.log(location)
           <p><Link to="/">Home</Link></p>
         <p> 
           <div className="dropdown">
-              <button className="dropbtn">Topics of Interest
+              <button className="dropbtn">Topics of Interest ☟
               </button>
             <div className="dropdown-content">
               <Link to="/bar">Bars</Link>
