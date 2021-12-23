@@ -42,7 +42,7 @@ const Events = props => {
       {events.length ? 
         <>
           {events.map(event=>
-          <div>
+          <div key={event._id}>
             <p className="user-name" key={event._id} state={event} to="/events">
             {event.name}<br></br>
             {event.scheduledActivities}<br></br>
