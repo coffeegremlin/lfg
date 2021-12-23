@@ -11,11 +11,11 @@ const Landing = props => {
 
   
   return (
-   
-   <main className= 'about-card'>
+
+    <main className= 'about-card'>
       <h1 className='about-header'> Looking for group? You just found one.</h1>
       <div className='icons'>
-       
+        
         <img className='icon' src={greenPotion} alt="greenPotion"/>
         <img className='icon' src={heart} alt="heart"/>
         <img className='icon' src={purpleGem} alt="greenPotion"/>
@@ -27,7 +27,7 @@ const Landing = props => {
       </div>
       {props.user && 
       <p className='about-body'>
-       
+
 <p>
 These days finding friends online is as easy as joining a Discord server, following a Twitter hashtag, or being an active chatter on your favorite Twitch streams. Finding friends as an adult IRL? A little more complicated. 
 </p>

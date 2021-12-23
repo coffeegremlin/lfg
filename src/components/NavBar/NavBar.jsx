@@ -1,10 +1,13 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import './Nav.css'
 import icon from '../../Assets/smallIcons/ourcon.png'
 
 
 
-const NavBar = ({ user, handleLogout, userProfile }) => {
+const NavBar = ({user, handleLogout, userProfile }) => {
+const location = useLocation()
+const isSignUp = location.pathname === '/signup'
+console.log(location)
   return (
     <>
       {user ?
@@ -53,7 +56,7 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
       <Link to="/bar">Bars</Link>
       <Link to="/restaurant">Restaurants</Link>
       <Link to="/retail">Retail Spaces</Link>
-       <Link to="/event">Events</Link>
+      <Link to="/event">Events</Link>
       <li><Link to="" onClick={handleLogout}>Log Out</Link></li>
     </ul> */}
   </div>
@@ -61,12 +64,12 @@ const NavBar = ({ user, handleLogout, userProfile }) => {
           
         </nav>
       :
-      !user && 
+      !user && !isSignUp && 
 
         <nav>
           <ul className='login-box'>
             <li><Link to="/login">Log In</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li>
+            <li><Link to="/signup" >Sign Up</Link></li>
           </ul>
         </nav>
       }
