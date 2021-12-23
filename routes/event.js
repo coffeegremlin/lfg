@@ -6,8 +6,8 @@ const router = Router()
 
 // ========= Public Routes ========= 
 
-router.get('/', checkAuth, eventCtrl.index)
-router.get('/:id', checkAuth, eventCtrl.show)
+router.get('/', eventCtrl.index)
+router.get('/:id', eventCtrl.show)
 
 
 // ========= Protected Routes ========= 

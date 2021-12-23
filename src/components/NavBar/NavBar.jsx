@@ -20,7 +20,7 @@ console.log(location)
         <div className='nav-route'>
           
           <p><Link to="/">Home</Link></p>
-        <p> 
+        <div> 
           <div className="dropdown">
               <button className="dropbtn">Topics of Interest ☟
               </button>
@@ -31,37 +31,13 @@ console.log(location)
               <Link to="/event">Events</Link>
             </div>
           </div> 
-        </p>
+        </div>
             <p><Link to="/profiles">Profiles</Link></p>
             <p><Link to="/profile" state={userProfile}>My Profile</Link></p>
             <p><Link to="/chat">Community Chat</Link></p>
             <p><Link to="" onClick={handleLogout}>Log Out</Link></p>
             </div>
       </div>
-<nav role="navigation">
-  <div id="menuToggle"> 
-    <input name="toggle" type="checkbox" />
-    <label for="toggle">
-      <span>menu</span>
-
-      <div></div>
-      <div></div>
-      <div></div>
-    </label>
-    {/* <ul id="menu">
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/profiles">Profiles</Link></li>
-      <li><Link to="/profile" state={userProfile}>My Profile</Link></li>
-      <li><Link to="/chat">Community Chat</Link></li>
-      <Link to="/bar">Bars</Link>
-      <Link to="/restaurant">Restaurants</Link>
-      <Link to="/retail">Retail Spaces</Link>
-      <Link to="/event">Events</Link>
-      <li><Link to="" onClick={handleLogout}>Log Out</Link></li>
-    </ul> */}
-  </div>
-</nav>
-          
         </nav>
       :
       !user && !isSignUp && 

@@ -10,6 +10,8 @@ const EventForm = (props) => {
     info:'',
   })
 
+  console.log(props.events)
+
   const handleUpdate = (e) => {
     console.log(props.updateEvent)
     // props.updateEvent('')
