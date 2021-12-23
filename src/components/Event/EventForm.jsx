@@ -49,7 +49,7 @@ const EventForm = (props) => {
       autoComplete='off'
       placeholder='Activity'
       value={eventData.scheduledActivities}
-       onChange={handleUpdate}
+      onChange={handleUpdate}
       />
       {/* address */}
       <input

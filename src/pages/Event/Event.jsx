@@ -4,7 +4,7 @@ import * as eventService from '../../services/eventService.js'
 import './Event.css'
 import UpdateEvent from '../../components/Event/UpdateEvent'
 
-import { getAllEvents, deleteEvent, updateEvent } from '../../services/eventService'
+import { getAllEvents, deleteEvent } from '../../services/eventService'
 
 const Events = props => {
   const [events, setEvents] = useState([])
