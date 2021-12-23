@@ -10,7 +10,7 @@ These days finding friends online is as easy. Finding friends IRL? A little more
 That's where we come in. LFG is a community-based web app for sharing your favorite games and nerdy opinions online and finding folks near you who agree.
 Search for new game stores, restaurants or bars to meet up, and local events to make the most of your local gaming community!
  
-🧩[LFG](https://lfgpls.herokuapp.com)🧩
+🧩 [LFG](https://lfgpls.herokuapp.com) 🧩
 ---------------------------------------------
 ---------------------------------------------------------
 
