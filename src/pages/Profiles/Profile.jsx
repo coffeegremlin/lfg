@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import './Profile.css'
 
 const Profile = ({ profile }) => {
 
   const location = useLocation()
-  const [profileInfo, setProfileInfo] = useState(location.state)
+  const [profileInfo] = useState(location.state)
 
   return (
     <main>
