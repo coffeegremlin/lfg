@@ -47,7 +47,7 @@ const App = () => {
   return (
     <>
       <NavBar user={user} userProfile={userProfile} handleLogout={handleLogout}/>
-      <div class="footer">
+      <div className="footer">
             <p className='us'>
 
               <img className='us-icons' src={Nate} alt="nate"/>
