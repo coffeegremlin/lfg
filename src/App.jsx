@@ -22,7 +22,6 @@ import Nate from './Assets/smallIcons/nate.png'
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
-
   const [userProfile, setUserProfile] = useState({})
 
   useEffect(() => {
@@ -43,7 +42,7 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
-  
+
   return (
     <>
       <NavBar user={user} userProfile={userProfile} handleLogout={handleLogout}/>

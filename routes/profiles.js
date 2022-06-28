@@ -4,10 +4,7 @@ import { decodeUserFromToken, checkAuth } from '../middleware/auth.js'
 
 const router = Router()
 
-/*---------- Public Routes ----------*/
-
-
-/*---------- Protected Routes ----------*/
+// ========= Protected Routes ========= //
 router.use(decodeUserFromToken)
 router.get('/', checkAuth, profilesCtrl.index)
 router.get('/currentuser', checkAuth, profilesCtrl.showLoggedInUserProfile)
